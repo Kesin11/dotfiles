@@ -7,6 +7,8 @@ call vundle#rc()
 " プラグインを記述する
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
+Bundle 'JavaScript-syntax'
+Bundle 'pangloss/vim-javascript'
 
 " Vundleの処理後、ftpluginとindentを読み込む
 filetype plugin indent on
