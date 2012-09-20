@@ -1,4 +1,4 @@
-"vundle conf"
+"----vundle conf
 set nocompatible
 filetype off
 set rtp+=~/.vim/vundle.git/
@@ -9,22 +9,26 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/syntastic'
 
 " Vundleの処理後、ftpluginとindentを読み込む
 filetype plugin indent on
 
-"global conf
+"----global conf
 set number
 set showmode
-syntax on
+syntax enable
+"colorscheme solarized
+colorscheme desert
 set smartindent
 set smarttab
 set ignorecase
 set smartcase
 set tabstop=4
+set shiftwidth=4
+set autoindent
 
-
-"neocomplecache default conf
+"----neocomplecache default conf
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplcache.
@@ -100,8 +104,14 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "----end neocomplcache default conf---- 
 
+"----Syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+	\ 'active_filetypes' : [],
+	\ 'passive_filetypes' : ['html'] }
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_javascript_checker = 'jshint'
 
-"Python conf"
+"----Python conf"
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
