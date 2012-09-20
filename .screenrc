@@ -1,0 +1,63 @@
+-t C-t switch
+# C-t r # resize mode
+# C-t x 2 split
+# C-t x o windowの移動
+# C-t A   名前をつける
+# C-t K   windowを消す
+# basics
+escape ^t^z
+#zombie ^[
+defscrollback 7000
+shell -$SHELL
+altscreen on
+autodetach on
+bind w windowlist -b
+
+# shut up!
+startup_message off
+vbell off
+
+# hardstatus
+defhstatus ^En:^Et@^EH
+hardstatus string "%?%h%:%t%?"
+termcapinfo xterm*|screen* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+hardstatus on
+
+# caption
+caption always "%{=r dd}%`%-w%{+b WK}%n %t%{-}%+w %= [%02c]"
+sorendition "+rb .G"
+
+# disable xoff
+bind s
+
+# notice when some event rised on hidden windows
+defmonitor on
+
+# make key bind like emacs on copy mode
+markkeys "h=^B:l=^F:^A=^A:$=^E"
+
+# key binds of window splitting/resize
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind -c REGION o focus
+bind -c REGION \^ resize
+bind x command -c REGION
+
+# key binds of window resize mode
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -2' 'command -c resize'
+
+# for color term (but they break Terminal of Mac...)
+attrcolor b ".I"
+#termcapinfo xterm*|screen* AB=\E[48;5;%dm:AF=\E[38;5;%dm
+#termcapinfo xterm-256color Co#256:pa#32767:AB=\E[48;5;%dm:AF=\E[38;5;%dm
+defbce on
+
+# escape codes to avoid resize window at starting screen
+termcapinfo xterm*|screen* is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l
+
+# この下の一行を入れないと、Macのターミナルでウインドウスクロールが出来ない
+termcapinfo xterm* ti@:te@
