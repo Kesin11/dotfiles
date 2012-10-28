@@ -104,12 +104,21 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "----end neocomplcache default conf---- 
 
-"----Syntastic
+"----Syntastic conf
 let g:syntastic_mode_map = { 'mode': 'active',
 	\ 'active_filetypes' : [],
 	\ 'passive_filetypes' : ['html'] }
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checker = 'jshint'
+"----end Syntastic conf
+
+"----unite conf
+"バッファ一覧
+noremap <C-U><C-B> :Unite buffer<CR>
+"ファイル一覧
+noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
+"最近使ったファイルの一覧
+noremap <C-U><C-R> :Unite file_mru<CR>
 
 "----Python conf"
 autocmd FileType python setl autoindent
