@@ -19,7 +19,8 @@ set number
 set showmode
 syntax enable
 "colorscheme solarized
-colorscheme desert
+"colorscheme desert
+colorscheme wombat256mod
 set smartindent
 set smarttab
 set ignorecase
