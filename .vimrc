@@ -20,7 +20,8 @@ set showmode
 syntax enable
 "colorscheme solarized
 "colorscheme desert
-colorscheme wombat256mod
+"colorscheme wombat256mod
+colorscheme mycolor
 set smartindent
 set smarttab
 set ignorecase
@@ -146,6 +147,14 @@ noremap <C-U><C-R> :Unite file_mru<CR>
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+".vim/syntax/python.vim options
+let python_version_2 = 1
+let python_highlight_builtin_objs = 1
+let python_highlight_builtin_funcs = 1
+let python_highlight_indent_errors = 1
+
+
 " Execute python script C-P 
 function! s:ExecPy()
     exe "!" . &ft . " %"
