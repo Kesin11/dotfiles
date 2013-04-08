@@ -36,11 +36,11 @@ set statusline=%f\ %{&fileencoding}
 " 括弧を自動補完
 " http://mba-hack.blogspot.jp/2013/02/vim.html#page12
 " インサートモード時の自動補完
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+inoremap {} {}<LEFT>
+inoremap [] []<LEFT>
+inoremap () ()<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
 " ビジュアルモード時に入力するとwordを囲む
 vnoremap { "zdi{<C-R>z}<ESC>
 vnoremap [ "zdi[<C-R>z]<ESC>
