@@ -10,6 +10,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
+Bundle 'tomtom/tcomment_vim'
 
 " Vundleの処理後、ftpluginとindentを読み込む
 filetype plugin indent on
