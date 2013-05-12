@@ -15,3 +15,5 @@ alias ls='ls -G'
 alias ll='ls -hlrt'
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
+
+source $HOME/.bashrc_local
