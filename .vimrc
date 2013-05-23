@@ -11,6 +11,7 @@ Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'thinca/vim-quickrun'
 
 " Vundleの処理後、ftpluginとindentを読み込む
 filetype plugin indent on
@@ -149,12 +150,17 @@ autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
-".vim/syntax/python.vim options
+"----.vim/syntax/python.vim options
 let python_version_2 = 1
 let python_highlight_builtin_objs = 1
 let python_highlight_builtin_funcs = 1
 let python_highlight_indent_errors = 1
 
+"----quickrun conf
+" 横分割時は下へ新しいウィンドウを開く
+set splitbelow
+" 縦分割時は右へ新しいウィンドウを開く
+set splitright
 
 " Execute python script C-P 
 function! s:ExecPy()
