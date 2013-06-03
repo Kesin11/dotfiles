@@ -36,6 +36,9 @@ set hlsearch
 set laststatus=2
 set statusline=%f\ %{&fileencoding}
 
+" ctagsの読み込み
+set tags+=~/.tags
+
 " 括弧を自動補完
 " http://mba-hack.blogspot.jp/2013/02/vim.html#page12
 " インサートモード時の自動補完
