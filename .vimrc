@@ -54,6 +54,16 @@ vnoremap ( "zdi(<C-R>z)<ESC>
 vnoremap " "zdi"<C-R>z"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 
+" 保存時に行末の空白を削除。カーソルが移動しないように記憶しておく
+function! s:remove_dust()
+    let cursor = getpos(".")
+    %s/\s\+$//ge
+    " %s/\t/  /ge
+    call setpos(".", cursor)
+    unlet cursor
+endfunction
+autocmd BufWritePre * call <SID>remove_dust()
+
 "----global conf
 
 "----neocomplecache default conf
