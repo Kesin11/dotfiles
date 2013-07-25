@@ -35,9 +35,18 @@ set autoindent
 set hlsearch
 set laststatus=2
 set statusline=%f\ %{&fileencoding}
-
+" 対応括弧に<>を追加
+set matchpairs& matchpairs+=<:>
 " ctagsの読み込み
 set tags+=~/.tags
+" 検索後にジャンプした際に検索単語を画面中央に持ってくる
+nnoremap n nzz
+nnoremap N Nzz
+" Shift + 矢印でウィンドウサイズを変更
+nnoremap <S-Left>  <C-w><<CR>
+nnoremap <S-Right> <C-w>><CR>
+nnoremap <S-Up>    <C-w>-<CR>
+nnoremap <S-Down>  <C-w>+<CR>
 
 " 括弧を自動補完
 " http://mba-hack.blogspot.jp/2013/02/vim.html#page12
@@ -140,15 +149,15 @@ endif
 "let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-"----end neocomplcache default conf---- 
+"----end neocomplcache default conf----
 
 "----Syntastic conf
 let g:syntastic_mode_map = { 'mode': 'active',
 	\ 'active_filetypes' : [],
 	\ 'passive_filetypes' : ['html'] }
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ['jshint'] 
-let g:syntastic_python_checkers = ['pyflakes'] 
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_python_checkers = ['pyflakes']
 "----end Syntastic conf
 
 "----unite conf
@@ -176,7 +185,7 @@ set splitbelow
 " 縦分割時は右へ新しいウィンドウを開く
 set splitright
 
-" Execute python script C-P 
+" Execute python script C-P
 function! s:ExecPy()
     exe "!" . &ft . " %"
     :endfunction
