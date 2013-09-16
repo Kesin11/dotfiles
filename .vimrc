@@ -48,6 +48,10 @@ nnoremap <S-Left>  <C-w><<CR>
 nnoremap <S-Right> <C-w>><CR>
 nnoremap <S-Up>    <C-w>-<CR>
 nnoremap <S-Down>  <C-w>+<CR>
+" 新しいタブを一番右に作る
+nmap <silent> tc :tablast <bar> tabnew<CR>
+" タブを閉じる
+nmap <silent> tx :tabclose<CR>
 
 " 括弧を自動補完
 " http://mba-hack.blogspot.jp/2013/02/vim.html#page12
@@ -186,6 +190,8 @@ noremap <C-U><C-B> :Unite buffer<CR>
 noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
 "最近使ったファイルの一覧
 noremap <C-U><C-R> :Unite file_mru<CR>
+"タブ一覧
+noremap <C-U><C-T> :Unite tab<CR>
 
 "----Python conf"
 autocmd FileType python setl autoindent
