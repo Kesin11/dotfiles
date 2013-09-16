@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/vimfiler'
 Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
@@ -192,6 +193,9 @@ noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
 noremap <C-U><C-R> :Unite file_mru<CR>
 "タブ一覧
 noremap <C-U><C-T> :Unite tab<CR>
+
+"----VimFirer conf
+let g:vimfiler_as_default_explorer = 1
 
 "----Python conf"
 autocmd FileType python setl autoindent
