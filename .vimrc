@@ -14,6 +14,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'thinca/vim-quickrun'
+Bundle 'thinca/vim-localrc'
 
 " Vundleの処理後、ftpluginとindentを読み込む
 filetype plugin indent on
