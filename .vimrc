@@ -1,4 +1,5 @@
-"----vundle conf
+"
+"---vundle conf
 set nocompatible
 filetype off
 set rtp+=~/.vim/vundle.git/
@@ -15,6 +16,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'thinca/vim-quickrun'
 Bundle 'thinca/vim-localrc'
+Bundle 'jceb/vim-hier'
 
 " Vundleの処理後、ftpluginとindentを読み込む
 filetype plugin indent on
