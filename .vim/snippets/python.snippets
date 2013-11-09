@@ -32,3 +32,17 @@ options indent
 
 	if __name__ == '__main__':
 		unittest.main()
+
+snippet :parameters
+abbr Parameters block for reStructuredText
+options indent
+    :Parameters:
+        - \`${1:arg}\` : ${2:type}
+            ${0:#:description}
+
+snippet :returns
+abbr Returns block for reStructuredText
+options indent
+    :Returns:
+        - \`${1:return}\` : ${2:type}
+            ${0:#:description}

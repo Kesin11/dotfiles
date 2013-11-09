@@ -64,12 +64,14 @@ inoremap [] []<LEFT>
 inoremap () ()<LEFT>
 inoremap "" ""<LEFT>
 inoremap '' ''<LEFT>
+inoremap `` ``<LEFT>
 " ビジュアルモード時に入力するとwordを囲む
 vnoremap { "zdi{<C-R>z}<ESC>
 vnoremap [ "zdi[<C-R>z]<ESC>
 vnoremap ( "zdi(<C-R>z)<ESC>
 vnoremap " "zdi"<C-R>z"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
+vnoremap ` "zdi`<C-R>z`<ESC>
 
 " 保存時に行末の空白を削除。カーソルが移動しないように記憶しておく
 function! s:remove_dust()
