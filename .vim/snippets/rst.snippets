@@ -1,0 +1,71 @@
+snippet contents
+abbr contents
+options head
+	.. Contents :: ${1:contents_name}
+
+snippet docinfo
+	:Author: ${1:Author}
+	:Revision: ${2:$Revision$}
+	:Description: ${3:#description}
+
+snippet section
+alias title
+options head
+	====================================
+	${1:section}
+	====================================
+
+snippet subsection
+alias subtitle
+options head
+	${1:subsection}
+	====================================
+
+snippet subsubsection
+alias subsubtitle
+options head
+	${1:subsubsection}
+	-----------------------------------
+
+
+snippet code
+abbr code-block
+options head
+options indent
+	.. code-block :: ${1:python}
+
+		${2:content}
+
+snippet link_raw
+abbr link_as_raw
+options head
+	\`${1:link}\`_
+
+snippet link
+abbr link_and_label
+options head
+	\`${1:title} <${2:link}>\`_
+
+snippet note
+options indent
+	.. note::
+
+		${1:note}
+
+snippet warning
+options indent
+	.. warning::
+
+		${1:warning}
+
+snippet label
+	.. _${1:label}:
+
+snippet ref_raw
+abbr ref_as_raw
+	:ref:\`${1:ref}\`
+
+snippet ref
+abbr ref_and_label
+options head
+	:ref:\`${1:title} <${2:ref}>\`
