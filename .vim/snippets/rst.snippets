@@ -13,16 +13,19 @@ options head
 	====================================
 	${1:section}
 	====================================
+	${0:#:content}
 
 snippet subsection
 options head
 	${1:subsection}
 	====================================
+	${0:#:content}
 
 snippet subsubsection
 options head
 	${1:subsubsection}
 	-----------------------------------
+	${0:#:content}
 
 
 snippet code
@@ -35,13 +38,11 @@ options indent
 
 snippet link_raw
 abbr link_as_raw
-options head
-	\`${1:link}\`_
+	\`${1:link}\`_ ${0:#:content}
 
 snippet link
 abbr link_and_label
-options head
-	\`${1:title} <${2:link}>\`_
+	\`${1:title} <${2:link}>\`_ ${0:#:content}
 
 snippet note
 options indent
@@ -60,9 +61,12 @@ snippet label
 
 snippet ref_raw
 abbr ref_as_raw
-	:ref:\`${1:ref}\`
+	:ref:\`${1:ref}\` ${0:#:content}
 
 snippet ref
 abbr ref_and_label
-options head
-	:ref:\`${1:title} <${2:ref}>\`
+	:ref:\`${1:title} <${2:ref}>\` ${0:#:content}
+
+snippet doc_raw
+abbr doc_as_raw
+	:doc:\`${1:doc}\`
