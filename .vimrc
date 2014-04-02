@@ -25,6 +25,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
+NeoBundle 'LeafCage/yankround.vim'
 
 " Required:
 filetype plugin indent on
@@ -226,6 +227,16 @@ noremap <C-U><C-T> :Unite tab<CR>
 
 "----VimFirer conf
 let g:vimfiler_as_default_explorer = 1
+
+"----yankround conf
+nmap p <Plug>(yankround-p)
+xmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+xmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
 
 "----Python conf"
 autocmd FileType python setl autoindent
