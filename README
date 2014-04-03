@@ -1,5 +1,7 @@
 My dotfiles
 
-cd ~/dotfiles
-git submodule init
-git submodule update
+SETUP:
+
+```
+sh ~/dotfiles/setup.sh
+```
