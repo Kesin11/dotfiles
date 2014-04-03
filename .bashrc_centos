@@ -1,0 +1,2 @@
+#centosだとlsでの色付けは-Gではなくて--color
+alias ls="ls --color"
