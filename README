@@ -1,7 +1,4 @@
 My dotfiles
 
 SETUP:
-
-```
-sh ~/dotfiles/setup.sh
-```
+  sh ~/dotfiles/setup.sh
