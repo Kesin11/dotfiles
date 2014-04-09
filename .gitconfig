@@ -1,0 +1,15 @@
+[user]
+	name = Kenta Kase
+	email = kesin1202000@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = /usr/bin/vim
+[alias]
+	co = checkout
+	st = status
+	hist = log --decorate --graph
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
