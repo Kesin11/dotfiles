@@ -218,13 +218,13 @@ let g:syntastic_python_checkers = ['pyflakes']
 
 "----unite conf
 "バッファ一覧
-noremap <C-U><C-B> :Unite buffer<CR>
+noremap <C-U>b :Unite buffer<CR>
 "ファイル一覧
-noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
+noremap <C-U>f :UniteWithBufferDir -buffer-name=files file<CR>
 "最近使ったファイルの一覧
-noremap <C-U><C-R> :Unite file_mru<CR>
+noremap <C-U>r :Unite file_mru<CR>
 "タブ一覧
-noremap <C-U><C-T> :Unite tab<CR>
+noremap <C-U>t :Unite tab<CR>
 
 "----VimFirer conf
 let g:vimfiler_as_default_explorer = 1
