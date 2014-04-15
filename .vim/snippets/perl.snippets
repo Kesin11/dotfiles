@@ -1,0 +1,69 @@
+# 編集前に:set noexpandtabでハードタブ入力に切り替える
+
+snippet dump
+options indent
+    use Data::Dumper; warn Dumper ${1:TARGET};
+
+snippet sub
+abbr sub with an arg
+options indent
+    sub ${1:#:function} {
+        my $${2:arg} = shift;
+
+        ${3:#:code}
+    }
+
+snippet subargs
+abbr sub with multi args
+options indent
+    sub ${1:#:function} {
+        my ($${2:arg}, ${3:arg}) = @_;
+
+        ${3:#:code}
+    }
+
+snippet subself
+abbr sub with self arg
+options indent
+    sub ${1:#:function} {
+        my ($${2:self}, ${3:arg}) = @_;
+
+        ${3:#:code}
+    }
+
+snippet subtest
+options indent
+    subtest "${1}" => sub {
+        ${2}
+    };
+
+snippet package
+abbr package template
+options indent
+    package ${1:package};
+
+    use strict;
+    use warnings;
+
+    sub new {
+        my ($class, $${2:arg}) = @_;
+        bless {
+            ${3:#:key} => ${4:#:value},
+        }, $class;
+    }
+
+    1;
+
+snippet testmore
+abbr Test::More template
+options indent
+    use strict;
+    use warnings;
+    use Test::More;
+    use ${1:package};
+
+    subtest "${2}" => sub {
+        ${3}
+    };
+
+    done_testing;
