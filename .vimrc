@@ -111,6 +111,12 @@ nnoremap g# g#zz
 nnoremap j gj
 nnoremap k gk
 
+" ファイルタイプ判別追加
+" Perl
+autocmd BufNewFile,BufRead *.psgi   set filetype=perl
+autocmd BufNewFile,BufRead *.t      set filetype=perl
+autocmd BufNewFile,BufRead cpanfile set filetype=perl
+
 "----global conf
 
 "----neocomplecache default conf
