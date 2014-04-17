@@ -26,7 +26,7 @@ snippet subself
 abbr sub with self arg
 options indent
     sub ${1:#:function} {
-        my ($${2:self}, ${3:arg}) = @_;
+        my ($self, ${2:arg}) = @_;
 
         ${3:#:code}
     }
@@ -36,6 +36,13 @@ options indent
     subtest "${1}" => sub {
         ${2}
     };
+
+snippet perl
+abbr perl template
+options indent
+	#!/usr/bin/perl
+	use strict;
+	use warnings;
 
 snippet package
 abbr package template
