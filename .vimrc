@@ -27,6 +27,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
 NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'mattn/emmet-vim'
 
 " Required:
 filetype plugin indent on
