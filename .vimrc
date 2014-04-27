@@ -64,6 +64,10 @@ set tags+=~/.tags
 " 検索後にジャンプした際に検索単語を画面中央に持ってくる
 nnoremap n nzz
 nnoremap N Nzz
+
+" Ctrl+cをESCに割り当て。Ctrl+cがESCと全く同じ動作になるはず
+inoremap <C-c> <ESC>
+
 " Shift + 矢印でウィンドウサイズを変更
 nnoremap <S-Left>  <C-w><<CR>
 nnoremap <S-Right> <C-w>><CR>
