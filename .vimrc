@@ -62,6 +62,9 @@ set statusline=%f\ %{&fileencoding}
 set matchpairs& matchpairs+=<:>
 " ctagsの読み込み
 set tags+=~/.tags
+" 縦分割でタグジャンプ
+" 現在はgでのタグ選択に対応できない
+map v<C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " 検索後にジャンプした際に検索単語を画面中央に持ってくる
 nnoremap n nzz
 nnoremap N Nzz
