@@ -60,8 +60,6 @@ set laststatus=2
 set statusline=%f\ %{&fileencoding}
 " 対応括弧に<>を追加
 set matchpairs& matchpairs+=<:>
-" ctagsの読み込み
-set tags+=~/.tags
 " 縦分割でタグジャンプ
 " 現在はgでのタグ選択に対応できない
 map v<C-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
@@ -254,26 +252,8 @@ nmap gP <Plug>(yankround-gP)
 nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
 
-"----Python conf"
-autocmd FileType python setl autoindent
-autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
-
-"----.vim/syntax/python.vim options
-let python_version_2 = 1
-let python_highlight_builtin_objs = 1
-let python_highlight_builtin_funcs = 1
-let python_highlight_indent_errors = 1
-
 "----quickrun conf
 " 横分割時は下へ新しいウィンドウを開く
 set splitbelow
 " 縦分割時は右へ新しいウィンドウを開く
 set splitright
-
-" Execute python script C-P
-function! s:ExecPy()
-    exe "!" . &ft . " %"
-    :endfunction
-    command! Exec call <SID>ExecPy()
-    autocmd FileType python map <silent> <C-P> :call <SID>ExecPy()<CR>
