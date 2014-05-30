@@ -227,6 +227,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_perl_checkers=['perl']
+let g:syntastic_enable_perl_checker = 1
 "----end Syntastic conf
 
 "----unite conf
