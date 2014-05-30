@@ -29,6 +29,7 @@ NeoBundle 'thinca/vim-localrc'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-perl/vim-perl'
+NeoBundle 'vim-scripts/taglist.vim'
 
 " Required:
 filetype plugin indent on
@@ -259,3 +260,13 @@ nmap <C-n> <Plug>(yankround-next)
 set splitbelow
 " 縦分割時は右へ新しいウィンドウを開く
 set splitright
+
+"----taglist conf
+":Tlistでタグリストオープン
+
+" 現在表示中のファイルのみのタグしか表示しない
+let Tlist_Show_One_File = 1
+" 右側にtag listのウインドを表示する
+let Tlist_Use_Right_Window = 1
+" taglistのウインドウだけならVimを閉じる
+let Tlist_Exit_OnlyWindow = 1
