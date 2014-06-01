@@ -24,4 +24,7 @@ alias ll='ls -hlrt'
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
+# 'hub' command alias to 'git'
+eval "$(hub alias -s)"
+
 source $HOME/.bashrc_local
