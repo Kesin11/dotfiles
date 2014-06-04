@@ -197,6 +197,14 @@ endif
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "----end neocomplcache default conf----
+"
+"----neocomplecache conf for Perl----
+"::をdelimiterにしない。package名の補完が楽になる
+if !exists('g:neocomplcache_delimiter_patterns')
+    let g:neocomplcache_delimiter_patterns = {}
+endif
+let g:neocomplcache_delimiter_patterns['perl'] = []
+"----end neocomplecache conf for Perl----
 
 "----neosnippet conf
 " Plugin key-mappings.
