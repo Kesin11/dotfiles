@@ -30,6 +30,14 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-scripts/taglist.vim'
+" perlomniはmakeが必要
+NeoBundle 'c9s/perlomni.vim'
+execute "NeoBundle 'Shougo/vimproc.vim'," . string({
+      \ 'build' : {
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ })
 
 " Required:
 filetype plugin indent on
@@ -196,6 +204,9 @@ endif
 "let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "----end neocomplcache default conf----
 "
 "----neocomplecache conf for Perl----
