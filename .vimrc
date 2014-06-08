@@ -278,3 +278,30 @@ let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 1
 " taglistのウインドウだけならVimを閉じる
 let Tlist_Exit_OnlyWindow = 1
+
+" ----NeoComplcache Include completion----
+"インクルードパスの指定
+" let g:neocomplcache_include_paths = {
+"   \ 'ruby' : '.,$HOME/.rvm/rubies/**/lib/ruby/1.8/',
+"   \ 'perl' : system('perl -e "print join(q/,/,@INC)"'),
+"   \ 'python' : '/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/',
+"   \ }
+" "インクルード文のパターンを指定
+" let g:neocomplcache_include_patterns = {
+"   \ 'ruby' : '^\s*require',
+"   \ 'perl' : '\\<\\(use\\\|require\\)\\>',
+"   \ 'python' : '\s*\\(from\\\|import\\)',
+"   \ }
+"   " \ 'perl' : '^\s*use',
+" "インクルード先のファイル名の解析パターン
+" let g:neocomplcache_include_exprs = {
+"   \ 'ruby' : substitute(v:fname,'::','/','g'),
+"   \ 'perl' : substitute(substitute(substitute(v:fname,'::','/','g'),'->\*','',''),'$','.pm',''),
+"   \ 'python' : substitute(v:fname,'\\.','/','g'),
+"   \ }
+"   " \ 'perl' : substitute(substitute(substitute(v:fname,'::','/','g'),'->\*','',''),'$','.pm',''),
+" let g:neocomplcache_include_suffixes = {
+"   \ 'python' : '.py',
+"   \ }
+"   " \ 'perl' : '.pm',
+  "
