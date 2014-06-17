@@ -48,19 +48,21 @@ options indent
     };
 
 snippet perl
-abbr perl template
+abbr perl script
 options indent
 	#!/usr/bin/perl
 	use strict;
 	use warnings;
+	use utf8;
 
-snippet package
-abbr package template
+snippet perl_package
+abbr perl package
 options indent
     package ${1:package};
 
     use strict;
     use warnings;
+	use utf8;
 
     sub new {
         my ($class, $${2:arg}) = @_;
@@ -71,11 +73,12 @@ options indent
 
     1;
 
-snippet testmore
-abbr Test::More template
+snippet perl_testmore
+abbr perl Test::More
 options indent
     use strict;
     use warnings;
+	use utf8;
     use Test::More;
     use ${1:package};
 
