@@ -1,0 +1,51 @@
+# 編集前に:set noexpandtabでハードタブ入力に切り替える
+# Xslate TTerse用のスニペット
+
+snippet ttvar
+	[% ${1:#:var} %]
+
+snippet ttfore
+	[% FOREACH ${1::item} IN ${2:#:arrayref} %]
+		* [% $1 %]
+	[% END %]
+
+snippet ttif
+	[% IF ${1:#:expression} %]
+		${2}
+	[% END %]
+
+snippet ttife
+	[% IF ${1:#:expression} %]
+		${2}
+	[% ELSE %]
+		${3}
+	[% END %]
+
+snippet ttifee
+	[% IF ${1:#:expression} %]
+		${2}
+	[% ELSIF ${3:#:expression} %]
+		${4}
+	[% ELSE %]
+		${5}
+	[% END %]
+
+snippet ttunless
+	[% UNLESS ${1:#:expression} %]
+		${2}
+	[% ELSE %]
+		${3}
+	[% END %]
+
+snippet ttswitch
+	[% SWITCH ${1:#:expression} %]
+	[% CASE ${2:#:case1} %]
+		${3}
+	[% CASE ${4:#:case2} %]
+		${5}
+	[% CASE DEFAULT %]
+		${6}
+	[% END %]
+
+snippet ttinclude
+	[% INCLUDE "${1:#:file.tt}" %]
