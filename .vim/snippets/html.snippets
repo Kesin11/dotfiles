@@ -49,3 +49,8 @@ snippet ttswitch
 
 snippet ttinclude
 	[% INCLUDE "${1:#:file.tt}" %]
+
+snippet ttwrapper
+	[% WRAPPER "${1:#:wrapper.tt}" WITH ${2:element}='${3:var}' %]
+		${0:#:content}
+	[% END %]
