@@ -87,3 +87,20 @@ options indent
     };
 
     done_testing;
+
+snippet while-each
+abbr while with each
+options indent
+	while (my ($${1:key}, $${2:value}) = each %${3:hash}){
+        ${0:#:code}
+    }
+
+snippet try-catch
+abbr Try::Tiny try-catch syntax
+options indent
+	try {
+		${1:#:code}
+	} catch {
+		warn $_;
+		${2:#:code}}
+	};
