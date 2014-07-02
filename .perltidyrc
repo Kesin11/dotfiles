@@ -1,0 +1,2 @@
+-l=100   # Max line width is 78 cols
+-ce
