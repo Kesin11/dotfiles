@@ -321,5 +321,3 @@ let Tlist_Exit_OnlyWindow = 1
 "----perl tidy conf
 nnoremap ,pt <Esc>:%! perltidy -se<CR>
 vnoremap ,pt <Esc>:'<,'>! perltidy -se<CR>
-autocmd BufWritePre *.pl :%! perltidy -se
-autocmd BufWritePre *.pm :%! perltidy -se
