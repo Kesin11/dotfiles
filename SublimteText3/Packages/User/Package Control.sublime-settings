@@ -4,12 +4,11 @@
 		"All Autocomplete",
 		"AutoFileName",
 		"BracketHighlighter",
-		"CTags",
 		"Sublime Files",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"Theme - Flatland",
-		"Theme - itg.flat",
+		"SublimeLinter-jshint",
+		"Surround",
 		"Vintageous"
 	]
 }
