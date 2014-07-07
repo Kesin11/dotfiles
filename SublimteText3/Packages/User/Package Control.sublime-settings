@@ -9,6 +9,12 @@
 		"SublimeLinter",
 		"SublimeLinter-jshint",
 		"Surround",
+		"Color Highlighter",
+		"CSS Snippets",
+		"Emmet",
+		"HTML5",
+		"jQuery",
+		"Twitter Bootstrap Snippets",
 		"Vintageous"
 	]
 }
