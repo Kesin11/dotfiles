@@ -30,12 +30,6 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-scripts/taglist.vim'
-execute "NeoBundle 'Shougo/vimproc.vim'," . string({
-      \ 'build' : {
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ })
 
 " Required:
 filetype plugin indent on
@@ -274,13 +268,6 @@ nmap <C-n> <Plug>(yankround-next)
 set splitbelow
 " 縦分割時は右へ新しいウィンドウを開く
 set splitright
-" vimprocで非同期実行。更新時間も設定する
-" let g:quickrun_config = {
-" \   "_" : {
-" \       "runner" : "vimproc",
-" \       "runner/vimproc/updatetime" : 40,
-" \   }
-" \}
 
 "----taglist conf
 ":Tlistでタグリストオープン
