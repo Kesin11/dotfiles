@@ -104,3 +104,10 @@ options indent
 		warn $_;
 		${2:#:code}}
 	};
+
+snippet DBIx::QueryLog
+abbr DBIx::QueryLog watch partial query log
+options indent
+	use DBIx::QueryLog();
+	DBIx::QueryLog->enable;
+	DBIx::QueryLog->disable;
