@@ -238,6 +238,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_perl_checkers=['perl']
 let g:syntastic_enable_perl_checker = 1
+let g:syntastic_loc_list_height = 5
 "----end Syntastic conf
 
 "----unite conf
