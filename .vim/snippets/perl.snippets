@@ -22,21 +22,20 @@ options indent
         ${3:#:code}
     }
 
+snippet subclass
+abbr sub with class arg
+options indent
+    sub ${1:#:function} {
+        my ($class, ${2:arg}) = @_;
+
+        ${3:#:code}
+    }
+
 snippet subself
 abbr sub with self arg
 options indent
     sub ${1:#:function} {
         my ($self, ${2:arg}) = @_;
-
-        ${3:#:code}
-    }
-
-snippet subselfhash
-abbr sub with self and hash(hashref)
-options indent
-    sub ${1:#:function} {
-		my $self = shift;
-		my %${2:args} = @_ == 1 ? %{$_[0]} : @_;
 
         ${3:#:code}
     }
