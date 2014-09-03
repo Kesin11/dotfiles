@@ -124,6 +124,8 @@ nnoremap k gk
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead cpanfile set filetype=perl
+" HTML
+autocmd BufNewFile,BufRead *.tx     set filetype=html
 
 "----global conf
 
