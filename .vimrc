@@ -248,10 +248,14 @@ let g:syntastic_loc_list_height = 5
 noremap <C-U>b :Unite buffer<CR>
 "ファイル一覧
 noremap <C-U>f :UniteWithBufferDir -buffer-name=files file<CR>
+"ファイル一覧 再帰
+noremap <C-U>F :Unite file_rec<CR>
 "最近使ったファイルの一覧
 noremap <C-U>r :Unite file_mru<CR>
 "タブ一覧
 noremap <C-U>t :Unite tab<CR>
+"include一覧
+noremap <C-U>i :Unite file_include<CR>
 
 "----VimFirer conf
 let g:vimfiler_as_default_explorer = 1
