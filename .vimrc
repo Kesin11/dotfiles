@@ -30,6 +30,7 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'tpope/vim-fugitive'
 
 " Required:
 filetype plugin indent on
@@ -59,6 +60,10 @@ set autoindent
 set hlsearch
 set laststatus=2
 set statusline=%f\ %{&fileencoding}
+set backspace=indent,eol,start
+set noswapfile
+set wildmenu
+set wildmode=longest,full "コマンドモードの補完タイプ
 " 対応括弧に<>を追加
 set matchpairs& matchpairs+=<:>
 " 縦分割でタグジャンプ
