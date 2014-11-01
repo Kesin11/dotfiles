@@ -31,6 +31,14 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 " Required:
 filetype plugin indent on
@@ -320,3 +328,8 @@ let Tlist_Exit_OnlyWindow = 1
 "----perl tidy conf
 nnoremap ,pt <Esc>:%! perltidy -se<CR>
 vnoremap ,pt <Esc>:'<,'>! perltidy -se<CR>
+
+"----lightline conf
+let g:lightline = {
+      \ 'colorscheme': 'wombat'
+      \ }
