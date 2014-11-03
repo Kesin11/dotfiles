@@ -14,7 +14,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " プラグインを記述する
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet'
@@ -142,84 +142,12 @@ autocmd BufNewFile,BufRead *.tx     set filetype=html
 
 "----global conf
 
-"----neocomplecache default conf
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Use camel case completion.
-let g:neocomplcache_enable_camel_case_completion = 1
-" Use underbar completion.
-let g:neocomplcache_enable_underbar_completion = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
-
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-  let g:neocomplcache_keyword_patterns = {}
+"----neocomplete or neocomplcache conf
+if neobundle#is_installed('neocomplete')
+    source ~/dotfiles/.vimrc.neocomplete
+else
+    source ~/dotfiles/.vimrc.neocomplcache
 endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" AutoComplPop like behavior.
-"let g:neocomplcache_enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplcache_enable_auto_select = 1
-"let g:neocomplcache_disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<TAB>"
-"inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Enable heavy omni completion.
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-"let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-"let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-"----end neocomplcache default conf----
-"
-"----neocomplecache conf for Perl----
-"::をdelimiterにしない。package名の補完が楽になる
-if !exists('g:neocomplcache_delimiter_patterns')
-    let g:neocomplcache_delimiter_patterns = {}
-endif
-let g:neocomplcache_delimiter_patterns['perl'] = []
-"----end neocomplecache conf for Perl----
 
 "----neosnippet conf
 " Plugin key-mappings.
@@ -242,7 +170,6 @@ endif
 
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/snippets'
-"----end neosnippet conf
 
 "----Syntastic conf
 let g:syntastic_mode_map = { 'mode': 'active',
@@ -254,7 +181,6 @@ let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_perl_checkers=['perl']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_loc_list_height = 5
-"----end Syntastic conf
 
 "----unite conf
 "バッファ一覧
@@ -298,32 +224,6 @@ let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 1
 " taglistのウインドウだけならVimを閉じる
 let Tlist_Exit_OnlyWindow = 1
-
-" ----NeoComplcache Include completion----
-"インクルードパスの指定
-" let g:neocomplcache_include_paths = {
-"   \ 'ruby' : '.,$HOME/.rvm/rubies/**/lib/ruby/1.8/',
-"   \ 'perl' : system('perl -e "print join(q/,/,@INC)"'),
-"   \ 'python' : '/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/',
-"   \ }
-" "インクルード文のパターンを指定
-" let g:neocomplcache_include_patterns = {
-"   \ 'ruby' : '^\s*require',
-"   \ 'perl' : '\\<\\(use\\\|require\\)\\>',
-"   \ 'python' : '\s*\\(from\\\|import\\)',
-"   \ }
-"   " \ 'perl' : '^\s*use',
-" "インクルード先のファイル名の解析パターン
-" let g:neocomplcache_include_exprs = {
-"   \ 'ruby' : substitute(v:fname,'::','/','g'),
-"   \ 'perl' : substitute(substitute(substitute(v:fname,'::','/','g'),'->\*','',''),'$','.pm',''),
-"   \ 'python' : substitute(v:fname,'\\.','/','g'),
-"   \ }
-"   " \ 'perl' : substitute(substitute(substitute(v:fname,'::','/','g'),'->\*','',''),'$','.pm',''),
-" let g:neocomplcache_include_suffixes = {
-"   \ 'python' : '.py',
-"   \ }
-"   " \ 'perl' : '.pm',
 
 "----perl tidy conf
 nnoremap ,pt <Esc>:%! perltidy -se<CR>
