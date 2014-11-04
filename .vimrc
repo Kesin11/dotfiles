@@ -231,5 +231,17 @@ vnoremap ,pt <Esc>:'<,'>! perltidy -se<CR>
 
 "----lightline conf
 let g:lightline = {
-      \ 'colorscheme': 'wombat'
-      \ }
+    \ 'colorscheme': 'wombat' }
+let g:lightline.active = {
+    \ 'left': [ [ 'mode', 'paste', 'modified' ],
+    \           [ 'readonly', 'relativepath', 'modified' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent' ],
+    \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
+let g:lightline.inactive = {
+    \ 'left': [ ['modified'], [ 'relativepath' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent' ] ] }
+let g:lightline.tabline = {
+    \ 'left': [ [ 'tabs' ] ],
+    \ 'right': [ [ 'close' ] ] }
