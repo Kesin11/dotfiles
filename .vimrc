@@ -32,6 +32,7 @@ NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'mac' : 'make -f make_mac.mak',
@@ -139,6 +140,8 @@ autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead cpanfile set filetype=perl
 " HTML
 autocmd BufNewFile,BufRead *.tx     set filetype=html
+" Coffee script
+autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 
 "----global conf
 
