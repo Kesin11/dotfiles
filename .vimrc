@@ -71,6 +71,7 @@ set laststatus=2
 set statusline=%f\ %{&fileencoding}
 set backspace=indent,eol,start
 set noswapfile
+set incsearch " インクリメントサーチ
 set wildmenu
 set wildmode=longest,full "コマンドモードの補完タイプ
 " 対応括弧に<>を追加
