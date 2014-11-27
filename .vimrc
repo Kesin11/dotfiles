@@ -134,6 +134,11 @@ nnoremap g# g#zz
 nnoremap j gj
 nnoremap k gk
 
+" C-p, C-nによる履歴呼び出しにフィルタリングを適用
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+
 " ファイルタイプ判別追加
 " Perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
