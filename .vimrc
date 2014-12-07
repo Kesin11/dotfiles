@@ -20,19 +20,22 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'JavaScript-syntax'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tomtom/tcomment_vim'
+
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-localrc'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'vim-perl/vim-perl'
-NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'vim-scripts/taglist.vim'
+
+NeoBundle 'JavaScript-syntax'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
+
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'mac' : 'make -f make_mac.mak',
