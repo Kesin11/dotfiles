@@ -110,3 +110,23 @@ options indent
 	use DBIx::QueryLog();
 	DBIx::QueryLog->enable;
 	DBIx::QueryLog->disable;
+
+nippet scalar
+abbr scalar with dereference arrayref
+options indent
+	scalar(@$${1:#:arrayref})
+
+snippet map
+abbr map
+options indent
+	map { ${1:$_} } @${2};
+
+snippet maparrayref
+abbr map with arrayref
+options indent
+	+[ map { ${1:$_} } @${2} ];
+
+snippet maphashref
+abbr map with hashref
+options indent
+	+{ map { ${1:$_} } @${2} };
