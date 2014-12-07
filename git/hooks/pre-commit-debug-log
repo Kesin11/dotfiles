@@ -1,7 +1,7 @@
 #!/bin/sh
 # perlのData::Dumper::Dumperを検出するgit hook
 
-NG_WORD="Dumper"
+NG_WORD="Data::Dumper"
 
 FILES=`git status --porcelain | grep "^\s*[A|M]\s*" | sed "s/\s*[A|M]\s*//"`
 EXIT=0
