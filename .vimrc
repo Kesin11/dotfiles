@@ -76,7 +76,7 @@ set backspace=indent,eol,start
 set noswapfile
 set incsearch " インクリメントサーチ
 set wildmenu
-set wildmode=longest,full "コマンドモードの補完タイプ
+set wildmode=longest:full "コマンドモードの補完タイプ
 " 対応括弧に<>を追加
 set matchpairs& matchpairs+=<:>
 " 縦分割でタグジャンプ
