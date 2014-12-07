@@ -32,6 +32,7 @@ NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'mac' : 'make -f make_mac.mak',
@@ -70,6 +71,7 @@ set laststatus=2
 set statusline=%f\ %{&fileencoding}
 set backspace=indent,eol,start
 set noswapfile
+set incsearch " インクリメントサーチ
 set wildmenu
 set wildmode=longest,full "コマンドモードの補完タイプ
 " 対応括弧に<>を追加
@@ -132,6 +134,11 @@ nnoremap g# g#zz
 nnoremap j gj
 nnoremap k gk
 
+" C-p, C-nによる履歴呼び出しにフィルタリングを適用
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+
 " ファイルタイプ判別追加
 " Perl
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
@@ -139,6 +146,8 @@ autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead cpanfile set filetype=perl
 " HTML
 autocmd BufNewFile,BufRead *.tx     set filetype=html
+" Coffee script
+autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 
 "----global conf
 
@@ -231,5 +240,17 @@ vnoremap ,pt <Esc>:'<,'>! perltidy -se<CR>
 
 "----lightline conf
 let g:lightline = {
-      \ 'colorscheme': 'wombat'
-      \ }
+    \ 'colorscheme': 'wombat' }
+let g:lightline.active = {
+    \ 'left': [ [ 'mode', 'paste', 'modified' ],
+    \           [ 'readonly', 'relativepath', 'modified' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent' ],
+    \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
+let g:lightline.inactive = {
+    \ 'left': [ ['modified'], [ 'relativepath' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent' ] ] }
+let g:lightline.tabline = {
+    \ 'left': [ [ 'tabs' ] ],
+    \ 'right': [ [ 'close' ] ] }
