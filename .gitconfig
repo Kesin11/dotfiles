@@ -8,8 +8,15 @@
 [alias]
 	co = checkout
 	st = status
+    br = branch
 	hist = log --decorate --graph
 ; [pager]
 ;     log = diff-highlight | less
 ;     show = diff-highlight | less
 ;     diff = diff-highlight | less
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+    tool = vimdiff
