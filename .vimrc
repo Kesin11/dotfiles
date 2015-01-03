@@ -29,6 +29,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'haya14busa/incsearch.vim'
 
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'pangloss/vim-javascript'
@@ -257,3 +258,8 @@ let g:lightline.inactive = {
 let g:lightline.tabline = {
     \ 'left': [ [ 'tabs' ] ],
     \ 'right': [ [ 'close' ] ] }
+
+"----incsearch.vim
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)u
