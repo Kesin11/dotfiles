@@ -46,7 +46,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 \ }
 
 " Required:
-filetype plugin indent on
+filetype off
+filetype plugin indent off
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -152,6 +153,9 @@ autocmd BufNewFile,BufRead cpanfile set filetype=perl
 autocmd BufNewFile,BufRead *.tx     set filetype=html
 " Coffee script
 autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+
+" ファイルタイプ毎の設定
+autocmd! FileType ruby setlocal shiftwidth=4 tabstop=2 softtabstop=2
 
 "----global conf
 
@@ -275,3 +279,4 @@ let g:quickrun_config['coffee'] = {
 \'exec' : ['%c -cbp %s']
 \}
 
+filetype plugin indent on
