@@ -130,3 +130,18 @@ snippet maphashref
 abbr map with hashref
 options indent
 	+{ map { ${1:$_} } @${2} };
+
+snippet grep
+abbr grep
+options indent
+	grep { ${1:$_} } @${2};
+
+snippet greparrayref
+abbr grep with arrayref
+options indent
+	+[ grep { ${1:$_} } @${2} ];
+
+snippet sort
+abbr sort
+options indent
+	sort { ${1:$a} <=> ${2:$b} } } @${3};
