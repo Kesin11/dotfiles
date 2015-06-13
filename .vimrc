@@ -192,6 +192,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers = ['pyflakes']
 let g:syntastic_perl_checkers=['perl']
+let g:syntastic_coffee_checkers=['coffeelint']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_loc_list_height = 5
 
@@ -263,3 +264,14 @@ let g:lightline.tabline = {
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)u
+
+"----coffee-script
+autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
+
+" QuickRunのcoffee
+let g:quickrun_config = {}
+let g:quickrun_config['coffee'] = {
+\'command' : 'coffee',
+\'exec' : ['%c -cbp %s']
+\}
+
