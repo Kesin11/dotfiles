@@ -16,6 +16,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " プラグインを記述する
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -203,21 +204,31 @@ let g:syntastic_enable_perl_checker = 1
 let g:syntastic_loc_list_height = 5
 
 "----unite conf
-"バッファ一覧
-noremap <C-U>b :Unite buffer<CR>
+nnoremap [unite]    <Nop>
+nmap     <Space> [unite]
 "ファイル一覧
-noremap <C-U>f :UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent>[unite]f :UniteWithBufferDir -buffer-name=files file<CR>
 "ファイル一覧 再帰
-noremap <C-U>F :Unite file_rec<CR>
-"最近使ったファイルの一覧
-noremap <C-U>r :Unite file_mru<CR>
+nnoremap <silent>[unite]F :Unite file_rec<CR>
+"最近使ったファイルの一覧, バッファ一覧
+nnoremap <silent>[unite]r :Unite file_mru buffer<CR>
 "タブ一覧
-noremap <C-U>t :Unite tab<CR>
+nnoremap <silent>[unite]t :Unite tab<CR>
 "include一覧
-noremap <C-U>i :Unite file_include<CR>
+nnoremap <silent>[unite]i :Unite file_include<CR>
+" unite-outline
+nnoremap <silent>[unite]o :Unite -no-quit -winheight=10 outline<CR>
+" unite grep
+nnoremap <silent>[unite]g :Unite grep -buffer-name=grep-buffer<CR>
+" unite grep with <C-R><C-W>
+nnoremap <silent>[unite]grw :Unite grep:. -buffer-name=grep-buffer<CR><C-R><C-W>
+" UniteResume
+nnoremap <silent>[unite]u :UniteResume<CR>
+nnoremap <silent>[unite]ug :UniteResume grep-buffer<CR>
 
 "----VimFirer conf
 let g:vimfiler_as_default_explorer = 1
+nnoremap <silent><C-e> :VimFiler -split -simple -winwidth=45 -no-quit<CR>
 
 "----yankround conf
 nmap p <Plug>(yankround-p)
