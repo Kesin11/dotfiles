@@ -241,6 +241,7 @@ xmap gp <Plug>(yankround-gp)
 nmap gP <Plug>(yankround-gP)
 nmap <C-p> <Plug>(yankround-prev)
 nmap <C-n> <Plug>(yankround-next)
+let g:yankround_use_region_hl = 1
 
 "----quickrun conf
 " 横分割時は下へ新しいウィンドウを開く
