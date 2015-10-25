@@ -197,11 +197,13 @@ let g:syntastic_mode_map = { 'mode': 'active',
 	\ 'passive_filetypes' : ['html'] }
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_python_exec = system('which python3')
+let g:syntastic_python_checkers = ['pyflakes', 'mypy']
 let g:syntastic_perl_checkers=['perl']
 let g:syntastic_coffee_checkers=['coffeelint']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_loc_list_height = 5
+let g:syntastic_aggregate_errors = 1
 
 "----unite conf
 nnoremap [unite]    <Nop>
