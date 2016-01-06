@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+[% IF ${1:expression} %]
+    ${2}
+[% ELSIF ${3:expression} %]
+    ${4}
+[% ELSE %]
+    ${5}
+[% END %]
+]]></content>
+    <tabTrigger>ttifee</tabTrigger>
+<!--     <scope>text.html</scope>
+ -->    <description>Xslate if-elsif-else</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+[% SET ${1:var} = ${2:expression} %]
+]]></content>
+    <tabTrigger>ttset</tabTrigger>
+<!--     <scope>text.html</scope>
+ -->    <description>Xslate set</description>
+</snippet>

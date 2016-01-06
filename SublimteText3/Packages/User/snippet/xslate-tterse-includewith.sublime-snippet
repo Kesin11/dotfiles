@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+[% INCLUDE "${1:file.tx}" WITH ${2:arg} = ${3:var} %]
+]]></content>
+    <tabTrigger>ttincludewith</tabTrigger>
+<!--     <scope>text.html</scope>
+ -->    <description>Xslate include-with</description>
+</snippet>

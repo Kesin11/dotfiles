@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+[%# <!-- ${1:comment} --> %]
+$2
+[%# <!-- /$1 --> %]
+]]></content>
+    <tabTrigger>ttcomment</tabTrigger>
+<!--     <scope>text.html</scope>
+ -->    <description>Xslate comment</description>
+</snippet>

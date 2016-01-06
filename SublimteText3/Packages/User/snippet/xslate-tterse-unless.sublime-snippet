@@ -1,0 +1,10 @@
+<snippet>
+    <content><![CDATA[
+[% UNLESS ${1:expression} %]
+    ${2}
+[% END %]
+]]></content>
+    <tabTrigger>ttunless</tabTrigger>
+<!--     <scope>text.html</scope>
+ -->    <description>Xslate unless</description>
+</snippet>
