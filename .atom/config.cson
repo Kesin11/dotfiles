@@ -15,7 +15,6 @@
   core:
     disabledPackages: [
       "minimap"
-      "atom-helloworld"
       "japanese-wrap"
       "zentabs"
       "linter-jshint"
