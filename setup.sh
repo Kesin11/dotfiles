@@ -14,3 +14,6 @@ ln -is ~/dotfiles/.tmux.conf .
 ln -is ~/dotfiles/.perltidyrc .
 ln -is ~/dotfiles/.inputrc .
 ln -is ~/dotfiles/.gitconfig .
+
+# atom
+sh ~/dotfiles/.atom/setup.sh
