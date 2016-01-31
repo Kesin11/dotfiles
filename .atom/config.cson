@@ -19,9 +19,6 @@
       "japanese-wrap"
       "zentabs"
       "linter-jshint"
-      "vim-mode"
-      "vim-mode-visual-block"
-      "ex-mode"
       "turbo-javascript"
     ]
     followSymlinks: true
