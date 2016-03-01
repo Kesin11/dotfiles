@@ -1,3 +1,6 @@
+# update atom installed package list
+# apm list --installed --bare > packages.txt
+
 if [ -e ~/.atom ]; then
     cd ~/.atom
     ln -is ~/dotfiles/.atom/config.cson
