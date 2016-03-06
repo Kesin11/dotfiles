@@ -1,3 +1,10 @@
 set completion-ignore-case on
 "\C-n":history-search-forward
 "\C-p":history-search-backward
+
+# allow input japanese in OSX with iTerm2
+# see: https://www.iterm2.com/faq.html
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
