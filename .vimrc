@@ -228,6 +228,11 @@ nnoremap <silent>[unite]grw :Unite grep:. -buffer-name=grep-buffer<CR><C-R><C-W>
 nnoremap <silent>[unite]u :UniteResume<CR>
 nnoremap <silent>[unite]ug :UniteResume grep-buffer<CR>
 
+" Start insert mode when open unite buffer
+call unite#custom#profile('default', 'context', {
+\ 'start_insert': 1
+\ })
+
 "----VimFirer conf
 let g:vimfiler_as_default_explorer = 1
 nnoremap <silent><C-e> :VimFiler -split -simple -winwidth=45 -no-quit<CR>
