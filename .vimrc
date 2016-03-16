@@ -82,6 +82,8 @@ set noswapfile
 set incsearch " インクリメントサーチ
 set wildmenu
 set wildmode=longest:full "コマンドモードの補完タイプ
+set noequalalways " 分割時に必ず2分割される
+
 " 対応括弧に<>を追加
 set matchpairs& matchpairs+=<:>
 " 縦分割でタグジャンプ
