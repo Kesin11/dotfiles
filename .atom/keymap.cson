@@ -55,8 +55,8 @@
 '.editor.vim-mode-plus:not(.insert-mode)':
   ': w enter': 'core:save'
   ': q enter': 'core:close'
-  ': s p enter':  'pane:split-down'
-  ': v s p enter':  'pane:split-right'
+  ': s p enter':  'pane:split-down-and-copy-active-item'
+  ': v s p enter':  'pane:split-right-and-copy-active-item'
   'g c c': 'editor:toggle-line-comments' # emulate tomtom/tcooment_vim
 
 # ----
