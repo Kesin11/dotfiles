@@ -83,6 +83,7 @@ set incsearch " インクリメントサーチ
 set wildmenu
 set wildmode=longest:full "コマンドモードの補完タイプ
 set noequalalways " 分割時に必ず2分割される
+set virtualedit=block " ビジュアルモードで文字が存在しないところまでカーソル移動か可能になる
 
 " 対応括弧に<>を追加
 set matchpairs& matchpairs+=<:>
@@ -161,6 +162,9 @@ autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 
 " ファイルタイプ毎の設定
 autocmd! FileType ruby setlocal shiftwidth=4 tabstop=2 softtabstop=2
+
+" 短縮入力
+cnoreabbrev vdiff vertical diffsplit
 
 "----global conf
 
