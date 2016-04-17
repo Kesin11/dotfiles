@@ -26,6 +26,14 @@ unset PROMPT_COMMAND
 # 毎回bash_historyに追記、ローカルと入れ替えをすることで各ペインで同期する
 export PROMPT_COMMAND="history -n;history -w;history -c;history -r;$PROMPT_COMMAND"
 
+if [ -e $HOME/dotfiles/tool/enhancd ]; then
+    ENHANCD_DISABLE_DOT=1;
+    source ~/dotfiles/tool/enhancd/enhancd.sh
+fi
+
 if [ -e $HOME/.bashrc_local ]; then
     source $HOME/.bashrc_local
 fi
+
+# added by travis gem
+[ -f /Users/Kesin/.travis/travis.sh ] && source /Users/Kesin/.travis/travis.sh
