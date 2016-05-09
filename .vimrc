@@ -17,6 +17,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -233,6 +234,8 @@ nnoremap <silent>[unite]grw :Unite grep:. -buffer-name=grep-buffer<CR><C-R><C-W>
 " UniteResume
 nnoremap <silent>[unite]u :UniteResume<CR>
 nnoremap <silent>[unite]ug :UniteResume grep-buffer<CR>
+" Unite quickfix location_list
+nnoremap <silent>[unite]l :Unite -no-quit -winheight=10 location_list<CR>
 
 " Start insert mode when open unite buffer
 call unite#custom#profile('default', 'context', {
