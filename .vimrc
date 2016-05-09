@@ -36,6 +36,7 @@ NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'elzr/vim-json'
 
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vim-perl/vim-perl'
@@ -308,5 +309,9 @@ let g:quickrun_config['coffee'] = {
 \'command' : 'coffee',
 \'exec' : ['%c -cbp %s']
 \}
+
+"----javascript
+"JSONを開いた時にダブルクォーテーションが隠されるVim標準機能をvim-jsonで無効化
+let g:vim_json_syntax_conceal = 0
 
 filetype plugin indent on
