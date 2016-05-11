@@ -34,10 +34,7 @@
 #   'ctrl-n': 'clip-history:paste-newer'
 #   'ctrl-P': 'clip-history:paste-last'
 
-'atom-text-editor':
-  'alt-o': 'atom-unixtime:show'
-  'alt-O': 'atom-unixtime:insert'
-
+#-------
 # autocomplete
 'body atom-text-editor.autocomplete-active':
   'ctrl-p': 'autocomplete-plus:move-up'
@@ -59,6 +56,12 @@
   ': v s p enter':  'pane:split-right-and-copy-active-item'
   'g c c': 'editor:toggle-line-comments' # emulate tomtom/tcooment_vim
 
+  't c': 'atom-vim-like-tab:new' # mean 'tab create'
+  ': t a b c': 'atom-vim-like-tab:close'
+  't p': 'atom-vim-like-tab:previous'
+  't n': 'atom-vim-like-tab:next'
+
+
 # ----
 # @t9md vim-mode-plus keymaps https://github.com/t9md/atom-vim-mode-plus/wiki/Keymap-example
 # text-editor
@@ -75,11 +78,6 @@
 
 # normal
 'atom-text-editor.vim-mode-plus.normal-mode':
-  'ctrl-j': 'window:focus-pane-below'
-  'ctrl-k': 'window:focus-pane-above'
-  'ctrl-h': 'window:focus-pane-on-left'
-  'ctrl-l': 'window:focus-pane-on-right'
-
   'g f': 'open-this:here'
   'ctrl-w f': 'open-this:split-down'
   'ctrl-w F': 'open-this:split-right'

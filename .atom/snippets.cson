@@ -58,7 +58,13 @@
     body: "console.warn(${0});"
   "console.trace":
     prefix: "ctrace"
-    body: "console.trace();"
+    body: "console.trace(${0});"
+  "console.assert":
+    prefix: "cassert"
+    body: "console.assert(${1:condition}, ${2});"
+  "util.inspect":
+    prefix: ["cinspect", "cdump"]
+    body: "util = require('util'); console.log(util.inspect(${1}, { showHidden: true, depth: ${2:2}, colors: true }));"
   # flow-control
   "if statement":
     prefix: "if"
@@ -151,25 +157,18 @@
         ${1:name}
       };
     """
-  # timers
-  "setTimeout":
-    prefix: "st"
+  # jasmine
+  "describe(es6)":
+    prefix: "describe"
     body: """
-    setTimeout(() => {
-    \t${0}
-    }, ${1:delay});
+    describe('${1:describe context}', () => {
+      ${2}
+    });
     """
-  "setInterval":
-    prefix: "si"
+  "it(es6)":
+    prefix: "it"
     body: """
-    setInterval(() => {
-    \t${0}
-    }, ${1:delay});
-    """
-  "setImmediate":
-    prefix: "sim"
-    body: """
-    setImmediate(() => {
-    \t${0}
+    it('${1:it context}', () => {
+      ${2}
     });
     """
