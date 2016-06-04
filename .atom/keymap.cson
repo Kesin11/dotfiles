@@ -60,6 +60,7 @@
   ': t a b c': 'atom-vim-like-tab:close'
   't p': 'atom-vim-like-tab:previous'
   't n': 'atom-vim-like-tab:next'
+  'space t': 'atom-vim-like-tab:list'
 
 
 # ----
