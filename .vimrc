@@ -29,6 +29,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tyru/open-browser-github.vim', {'depends': 'tyru/open-browser.vim'}
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'haya14busa/incsearch.vim'
