@@ -1,6 +1,5 @@
 set completion-ignore-case on
 set completion-map-case on
-C-j: menu-complete
 
 "\C-n":history-search-forward
 "\C-p":history-search-backward
