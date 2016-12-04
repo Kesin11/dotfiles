@@ -2,7 +2,7 @@
 
 snippet dump
 options indent
-    use Data::Dumper; warn Dumper ${1:TARGET};
+    use Data::Dumper; warn Dumper ${0:TARGET};
 
 snippet sub
 abbr sub with an arg
@@ -111,7 +111,7 @@ options indent
 	DBIx::QueryLog->enable;
 	DBIx::QueryLog->disable;
 
-nippet scalar
+snippet scalar
 abbr scalar with dereference arrayref
 options indent
 	scalar(@$${1:#:arrayref})
@@ -119,29 +119,37 @@ options indent
 snippet map
 abbr map
 options indent
-	map { ${1:$_} } @${2};
+	map { $${0:_} } @$${1};
 
 snippet maparrayref
 abbr map with arrayref
 options indent
-	+[ map { ${1:$_} } @${2} ];
+	+[ map { $${0:_} } @$${1} ];
 
 snippet maphashref
 abbr map with hashref
 options indent
-	+{ map { ${1:$_} } @${2} };
+	+{ map { $${0:_} } @$${1} };
 
 snippet grep
 abbr grep
 options indent
-	grep { ${1:$_} } @${2};
+	grep { $${0:_} } @$${1};
 
 snippet greparrayref
 abbr grep with arrayref
 options indent
-	+[ grep { ${1:$_} } @${2} ];
+	+[ grep { $${0:_} } @$${1} ];
+
+snippet mapgreparrayref
+abbr map and grep with arrayref
+options indent
+	+[
+		grep { $${2:_} }
+		map  { $${3:_} }
+	@$${1} ];
 
 snippet sort
 abbr sort
 options indent
-	sort { ${1:$a} <=> ${2:$b} } } @${3};
+	sort { $${2:a} <=> $${0:b} } } @$${1};
