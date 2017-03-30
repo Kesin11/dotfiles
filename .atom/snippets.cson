@@ -49,19 +49,19 @@
   # console
   "console.log":
     prefix: "clog"
-    body: "console.log(${0});"
+    body: "console.log(${0})"
   "console.error":
     prefix: "cerror"
-    body: "console.error(${0});"
+    body: "console.error(${0})"
   "console.warn":
     prefix: "cwarn"
-    body: "console.warn(${0});"
+    body: "console.warn(${0})"
   "console.trace":
     prefix: "ctrace"
-    body: "console.trace(${0});"
+    body: "console.trace(${0})"
   "console.assert":
     prefix: "cassert"
-    body: "console.assert(${1:condition}, ${2});"
+    body: "console.assert(${1:condition}, ${2})"
   "util.inspect":
     prefix: ["cinspect", "cdump"]
     body: "util = require('util'); console.log(util.inspect(${1}, { showHidden: true, depth: ${2:2}, colors: true }));"
