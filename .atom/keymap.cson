@@ -40,12 +40,13 @@
   'ctrl-p': 'autocomplete-plus:move-up'
   'ctrl-n': 'autocomplete-plus:move-down'
   'tab': 'autocomplete-plus:move-down'
-  # 'ctrl-k': 'autocomplete-plus:confirm'
+  'ctrl-k': 'autocomplete-plus:confirm'
 
-# snippets
-# 'atom-text-editor:not([mini])':
 'atom-text-editor':
+  # snippets
   'ctrl-k': 'snippets:next-tab-stop'
+  # tree-view
+  'ctrl-e': 'tree-view:show'
 
 # emulate vim ex-mode
 # https://github.com/atom/vim-mode/issues/50
@@ -105,6 +106,11 @@
   # 'cmd-y': 'clip-history:paste-newer'
   # 'ctrl-Y': 'clip-history:paste-last'
   'ctrl-i': 'vim-mode-plus:insert-last-inserted'
+
+  # emmet
+  # emmet-vim compatible key  bind
+  'ctrl-y ,': 'emmet:expand-abbreviation'
+
 # non-insert
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   ']': 'vim-mode-plus:move-to-last-character-of-line'
@@ -141,6 +147,9 @@
   ';': 'vim-mode-plus:search-confirm'
   'space': 'vim-mode-plus:search-insert-wild-pattern'
   'ctrl-g': 'vim-mode-plus:search-cancel'
+# with narrow
+  'ctrl-l': 'vim-mode-plus-user:narrow:lines-from-search'
+  'cmd-/': 'vim-mode-plus-user:narrow:atom-scan'
 
 # Other
 '.select-list':
