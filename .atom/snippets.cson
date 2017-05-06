@@ -172,3 +172,10 @@
       ${2}
     });
     """
+
+  # eslint
+  "inline disable":
+    prefix: "eslint-disable-line"
+    body: """
+    // eslint-disable-line ${1:rule}
+    """
