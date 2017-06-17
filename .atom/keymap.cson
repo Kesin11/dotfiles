@@ -45,24 +45,9 @@
 'atom-text-editor':
   # snippets
   'ctrl-k': 'snippets:next-tab-stop'
+
   # tree-view
-  'ctrl-e': 'tree-view:show'
-
-# emulate vim ex-mode
-# https://github.com/atom/vim-mode/issues/50
-'.editor.vim-mode-plus:not(.insert-mode)':
-  ': w enter': 'core:save'
-  ': q enter': 'core:close'
-  ': s p enter':  'pane:split-down-and-copy-active-item'
-  ': v s p enter':  'pane:split-right-and-copy-active-item'
-  'g c c': 'editor:toggle-line-comments' # emulate tomtom/tcooment_vim
-
-  't c': 'atom-vim-like-tab:new' # mean 'tab create'
-  ': t a b c': 'atom-vim-like-tab:close'
-  't p': 'atom-vim-like-tab:previous'
-  't n': 'atom-vim-like-tab:next'
-  'space t': 'atom-vim-like-tab:list'
-
+  'ctrl-e': 'tree-view:toggle-focus'
 
 # ----
 # @t9md vim-mode-plus keymaps https://github.com/t9md/atom-vim-mode-plus/wiki/Keymap-example
@@ -118,6 +103,20 @@
   'ctrl-p': 'clip-history:paste'
   'ctrl-n': 'clip-history:paste-newer'
   'ctrl-P': 'clip-history:paste-last'
+
+  # emulate vim ex-mode
+  # https://github.com/atom/vim-mode/issues/50
+  ': w enter': 'core:save'
+  ': q enter': 'core:close'
+  ': s p enter':  'pane:split-down-and-copy-active-item'
+  ': v s p enter':  'pane:split-right-and-copy-active-item'
+  'g c c': 'editor:toggle-line-comments' # emulate tomtom/tcooment_vim
+
+  't c': 'atom-vim-like-tab:new' # mean 'tab create'
+  ': t a b c': 'atom-vim-like-tab:close'
+  't p': 'atom-vim-like-tab:previous'
+  't n': 'atom-vim-like-tab:next'
+  'space t': 'atom-vim-like-tab:list'
 
 # visual, operator-pending
 'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
