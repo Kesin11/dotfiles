@@ -1,5 +1,7 @@
 .vim/bundle
 .DS_Store
+tool/*
+!setup.sh
 
 Package Control.last-run
 Package Control.ca-list
