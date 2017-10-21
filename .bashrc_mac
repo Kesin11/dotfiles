@@ -11,17 +11,17 @@ if [ -f $BREW_ROOT/etc/bash_completion ]; then
 fi
 
 #rbenv
-#export PATH=$HOME/.rbenv/bin:$PATH
-#eval "$(rbenv init -)"
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 
 #perlbrew
-source ~/perl5/perlbrew/etc/bashrc
+# source ~/perl5/perlbrew/etc/bashrc
 
 #mysql
 #$export PATH=/opt/local/lib/mysql55/bin/:$PATH
 
 #virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 #node npm
 export PATH=$PATH:/usr/local/share/npm/bin/
@@ -33,7 +33,3 @@ eval "$(hub alias -s)"
 
 # hub command completion
 source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
-
-# rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"

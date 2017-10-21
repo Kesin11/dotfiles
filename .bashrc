@@ -28,7 +28,7 @@ export PROMPT_COMMAND="history -a;history -c; history -r;$PROMPT_COMMAND"
 
 if [ -e $HOME/dotfiles/tool/enhancd ]; then
     ENHANCD_DISABLE_DOT=1;
-    source ~/dotfiles/tool/enhancd/enhancd.sh
+    source ~/dotfiles/tool/enhancd/init.sh
 fi
 
 if [ -e $HOME/.bashrc_local ]; then

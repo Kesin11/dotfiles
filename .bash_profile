@@ -1,7 +1,7 @@
 #swhich PATH for MacPorts or homebrew
-if [ -e /opt/local ]; then
-    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-elif [ -e /usr/local/Library/Homebrew ]; then
+if [ -e /usr/local/Library/Homebrew ]; then # for old homebrew
+    export PATH=/usr/local/bin:$PATH
+elif [ -e /usr/local/Homebrew ]; then # for newer homebrew
     export PATH=/usr/local/bin:$PATH
 fi
 
