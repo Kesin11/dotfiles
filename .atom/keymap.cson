@@ -35,16 +35,20 @@
 #   'ctrl-P': 'clip-history:paste-last'
 
 #-------
+# atom-workspace(global)
+'atom-workspace':
+  'ctrl-shift-t': 'platformio-ide-terminal:toggle'
+
+
 # autocomplete
 'body atom-text-editor.autocomplete-active':
   'ctrl-p': 'autocomplete-plus:move-up'
   'ctrl-n': 'autocomplete-plus:move-down'
-  'tab': 'autocomplete-plus:move-down'
   'ctrl-k': 'autocomplete-plus:confirm'
 
 'atom-text-editor':
   # snippets
-  'ctrl-k': 'snippets:next-tab-stop'
+  'tab': 'snippets:next-tab-stop'
 
   # tree-view
   'ctrl-e': 'tree-view:toggle-focus'
@@ -112,6 +116,7 @@
   ': v s p enter':  'pane:split-right-and-copy-active-item'
   'g c c': 'editor:toggle-line-comments' # emulate tomtom/tcooment_vim
 
+  # atom-vim-like-tab
   't c': 'atom-vim-like-tab:new' # mean 'tab create'
   ': t a b c': 'atom-vim-like-tab:close'
   't p': 'atom-vim-like-tab:previous'
