@@ -29,6 +29,15 @@
     \t}
     }
     """
+  "class export":
+    prefix: "class-export"
+    body: """
+    export class ${1:name} {
+    \tconstructor(${2:arguments}) {
+    \t\t${0}
+    \t}
+    }
+    """
   "class extends":
     prefix: "class-extends"
     body: """
@@ -146,16 +155,26 @@
   # module
   "require":
     prefix: "require"
-    body: """require("${1:module}");"""
+    body: """require("${1:module}")"""
   "const-require(es6)":
     prefix: "const_require"
-    body: """const ${1:module} = require("${2:path}");"""
+    body: """const ${1:module} = require("${2:path}")"""
   "module.exports":
     prefix: "module-exports"
     body: """
       module.exports = {
         ${1:name}
-      };
+      }
+    """
+  "import":
+    prefix: "import"
+    body: """
+      import { ${1:module} } from '${2:path}'
+    """
+  "export default":
+    prefix: "export-default"
+    body: """
+      export default ${1:module}
     """
   # jasmine
   "describe(es6)":
