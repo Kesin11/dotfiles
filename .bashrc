@@ -34,6 +34,3 @@ fi
 if [ -e $HOME/.bashrc_local ]; then
     source $HOME/.bashrc_local
 fi
-
-# added by travis gem
-[ -f /Users/Kesin/.travis/travis.sh ] && source /Users/Kesin/.travis/travis.sh
