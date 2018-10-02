@@ -1,8 +1,0 @@
-<snippet>
-    <content><![CDATA[
-[% ${1:var} | dump %]
-]]></content>
-    <tabTrigger>ttdump</tabTrigger>
-<!--     <scope>text.html</scope>
- -->    <description>Xslate dump</description>
-</snippet>
