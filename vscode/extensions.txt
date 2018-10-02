@@ -1,0 +1,15 @@
+andys8.jest-snippets
+CoenraadS.bracket-pair-colorizer
+dbaeumer.vscode-eslint
+eg2.tslint
+formulahendry.code-runner
+formulahendry.terminal
+mechatroner.rainbow-csv
+npxms.hide-gitignored
+octref.vetur
+Orta.vscode-jest
+PeterJausovec.vscode-docker
+SirTobi.code-clip-ring
+toba.vsfire
+tunnckocore.modern-javascript-snippets
+vscodevim.vim

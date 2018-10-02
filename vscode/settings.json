@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 13,
+    "editor.tabSize": 2,
+    "editor.quickSuggestionsDelay": 5,
+    "tslint.configFile": "./tslint.json",
+    "tslint.alwaysShowStatus": true,
+    "tslint.autoFixOnSave": true,
+    "explorer.confirmDragAndDrop": false,
+    "vim.hlsearch": true,
+}
