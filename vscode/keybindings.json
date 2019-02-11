@@ -34,14 +34,14 @@
         "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-        "key": "m",
+        "key": "ctrl+m",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
     },
     {
         "key": "enter",
         "command": "-renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
         "key": "backspace",
@@ -54,19 +54,14 @@
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
     },
     {
-        "key": "a",
+        "key": "ctrl+a",
         "command": "explorer.newFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
     },
     {
-        "key": "shift+a",
+        "key": "ctrl+shift+a",
         "command": "explorer.newFolder",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
-    },
-    {
-        "key": "enter",
-        "command": "-renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
         "key": "ctrl+i",
