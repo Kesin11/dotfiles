@@ -11,6 +11,7 @@
     br = branch
 	hist = log --decorate --graph
     pco = !git checkout `git branch | peco | cut -d" " -f2`
+; Enable after install git with homebrew
 ; [pager]
 ;     log = diff-highlight | less
 ;     show = diff-highlight | less
@@ -19,5 +20,7 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[help]
+    autocorrect = 20
 [merge]
     tool = vimdiff
