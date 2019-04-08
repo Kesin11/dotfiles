@@ -162,6 +162,8 @@ autocmd BufNewFile,BufRead cpanfile set filetype=perl
 autocmd BufNewFile,BufRead *.tx     set filetype=html
 " Coffee script
 autocmd BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" Ruby
+autocmd BufRead,BufNewFile,BufReadPre Fastfile   set filetype=ruby
 
 " ファイルタイプ毎の設定
 autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
