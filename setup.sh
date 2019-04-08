@@ -20,6 +20,9 @@ ln -is ~/dotfiles/.gitconfig .
 # atom
 sh ~/dotfiles/.atom/setup.sh
 
+# vscode
+sh ~/dotfiles/vscode/setup.sh
+
 # tool
 mkdir ~/dotfiles/tool
 sh ~/dotfiles/tool/setup.sh
