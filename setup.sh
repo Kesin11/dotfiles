@@ -27,4 +27,8 @@ sh ~/dotfiles/vscode/setup.sh
 mkdir ~/dotfiles/tool
 sh ~/dotfiles/tool/setup.sh
 
+if [ `uname` = "Darwin" ]; then
+  sh ~/dotfiles/brew-install.sh
+fi
+
 echo "Replace .gitconfig to local one if you need use another one"
