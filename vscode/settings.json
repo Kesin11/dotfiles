@@ -8,6 +8,13 @@
     "vim.hlsearch": true,
     "editor.minimap.enabled": false,
     "vsnotes.defaultNotePath": "/Users/kesin/Dropbox/Documents/vsnote",
-    "eslint.autoFixOnSave": true,
     "vim.history": 100,
+    "window.zoomLevel": 0,
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.provideLintTask": true,
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ]
 }
