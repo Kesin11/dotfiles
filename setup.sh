@@ -18,7 +18,7 @@ ln -is ~/dotfiles/.inputrc .
 ln -is ~/dotfiles/.gitconfig .
 
 # atom
-sh ~/dotfiles/.atom/setup.sh
+#sh ~/dotfiles/.atom/setup.sh
 
 # vscode
 sh ~/dotfiles/vscode/setup.sh
