@@ -2,19 +2,30 @@
     "editor.fontSize": 13,
     "editor.tabSize": 2,
     "editor.quickSuggestionsDelay": 5,
-    "tslint.configFile": "./tslint.json",
-    "tslint.alwaysShowStatus": true,
-    "tslint.autoFixOnSave": true,
-    "vim.hlsearch": true,
     "editor.minimap.enabled": false,
-    "vsnotes.defaultNotePath": "/Users/kesin/Dropbox/Documents/vsnote",
-    "vim.history": 100,
     "window.zoomLevel": 0,
+    "vim.hlsearch": true,
+    "vim.history": 100,
     "eslint.autoFixOnSave": true,
     "eslint.alwaysShowStatus": true,
-    "eslint.provideLintTask": true,
+    "eslint.lintTask.enable": true,
     "eslint.validate": [
         "javascript",
         "typescript"
-    ]
+    ],
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "go.useLanguageServer": true,
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/vendor": true
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "vsonline.planFilter": "/subscriptions/323aa9f8-8954-4b18-88fb-db328b8d432d/resourceGroups/vso-rg-aa57b72/providers/Microsoft.VSOnline/plans/vso-plan-southeastasia",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }
