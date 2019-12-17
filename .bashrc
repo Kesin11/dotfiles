@@ -21,7 +21,7 @@ export HISTFILESIZE=50000
 export HISTSIZE=50000
 # コマンドの重複は認めない
 export HISTCONTROL=ignoredups:erasedups
-shopt -u histappend # .bash_history追記モードは不要なのでOFF
+# shopt -u histappend # .bash_history追記モードは不要なのでOFF
 unset PROMPT_COMMAND
 # .bash_historyに前回コマンドを1行追加、端末ローカル履歴の削除、.bash_historyから履歴の再読込
 export PROMPT_COMMAND="history -a;history -c; history -r;$PROMPT_COMMAND"
