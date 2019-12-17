@@ -17,18 +17,21 @@ ln -is ~/dotfiles/.tmux.conf .
 ln -is ~/dotfiles/.inputrc .
 ln -is ~/dotfiles/.gitconfig .
 
+# tool
+mkdir ~/dotfiles/tool
+sh ~/dotfiles/tool/setup.sh
+
+if [ `uname` = "Darwin" ]; then
+  ln -is ~/dotfiles/.bashrc_mac .bashrc_local
+  sh ~/dotfiles/brew-install.sh
+fi
+
 # atom
 #sh ~/dotfiles/.atom/setup.sh
 
 # vscode
 sh ~/dotfiles/vscode/setup.sh
 
-# tool
-mkdir ~/dotfiles/tool
-sh ~/dotfiles/tool/setup.sh
 
-if [ `uname` = "Darwin" ]; then
-  sh ~/dotfiles/brew-install.sh
-fi
-
+echo "-----Finish!!------"
 echo "Replace .gitconfig to local one if you need use another one"
