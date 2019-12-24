@@ -6,13 +6,8 @@
     "window.zoomLevel": 0,
     "vim.hlsearch": true,
     "vim.history": 100,
-    "eslint.autoFixOnSave": true,
     "eslint.alwaysShowStatus": true,
     "eslint.lintTask.enable": true,
-    "eslint.validate": [
-        "javascript",
-        "typescript"
-    ],
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
@@ -28,4 +23,9 @@
     "vsonline.planFilter": "/subscriptions/323aa9f8-8954-4b18-88fb-db328b8d432d/resourceGroups/vso-rg-aa57b72/providers/Microsoft.VSOnline/plans/vso-plan-southeastasia",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSaveTimeout": 2000,
 }
