@@ -26,9 +26,9 @@ unset PROMPT_COMMAND
 # .bash_historyに前回コマンドを1行追加、端末ローカル履歴の削除、.bash_historyから履歴の再読込
 export PROMPT_COMMAND="history -a;history -c; history -r;$PROMPT_COMMAND"
 
-if [ -e $HOME/dotfiles/tool/enhancd ]; then
+if [ -e $HOME/enhancd ]; then
     ENHANCD_DISABLE_DOT=1;
-    source ~/dotfiles/tool/enhancd/init.sh
+    source ~/enhancd/init.sh
 fi
 
 if [ -e $HOME/.bashrc_local ]; then

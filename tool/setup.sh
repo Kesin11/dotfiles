@@ -1,3 +1,3 @@
 # enhancd
-cd ~/dotfiles/tool
+cd ~
 git clone https://github.com/b4b4r07/enhancd

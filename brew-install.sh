@@ -15,6 +15,7 @@ brew install vim
 brew install rbenv
 brew install nvm
 brew install circleci
+brew install peco
 brew cask install google-cloud-sdk
 
 # Dev app
