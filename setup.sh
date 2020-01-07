@@ -22,6 +22,10 @@ mkdir ~/dotfiles/tool
 sh ~/dotfiles/tool/setup.sh
 
 if [ `uname` = "Darwin" ]; then
+  # KeyRepeat settings
+  defaults write -g InitialKeyRepeat -int 15
+  defaults write -g KeyRepeat -int 2
+
   ln -is ~/dotfiles/.bashrc_mac .bashrc_local
   sh ~/dotfiles/brew-install.sh
 fi
