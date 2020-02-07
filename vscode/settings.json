@@ -27,5 +27,8 @@
         "source.fixAll.eslint": true
     },
     "eslint.format.enable": true,
-    "editor.codeActionsOnSaveTimeout": 2000
+    "editor.codeActionsOnSaveTimeout": 2000,
+    "breadcrumbs.enabled": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 3
 }
