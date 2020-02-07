@@ -6,6 +6,7 @@ eamodio.gitlens
 eg2.tslint
 formulahendry.code-runner
 formulahendry.terminal
+GitHub.vscode-pull-request-github
 marp-team.marp-vscode
 mauve.terraform
 mechatroner.rainbow-csv
@@ -24,4 +25,5 @@ Orta.vscode-jest
 taichi.vscode-textlint
 toba.vsfire
 tunnckocore.modern-javascript-snippets
+VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
