@@ -30,5 +30,10 @@
     "editor.codeActionsOnSaveTimeout": 2000,
     "breadcrumbs.enabled": true,
     "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 3
+    "workbench.editor.limit.value": 3,
+    "yaml.schemaStore.enable": false,
+    "yaml.schemas": {
+        "http://json.schemastore.org/circleciconfig": ["/.circleci/config.yml"],
+        "http://json.schemastore.org/github-workflow": ["/.github/workflows/*.yml"]
+    }
 }

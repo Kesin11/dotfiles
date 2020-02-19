@@ -22,6 +22,8 @@ ms-vsonline.vsonline
 npxms.hide-gitignored
 octref.vetur
 Orta.vscode-jest
+redhat.vscode-yaml
+Remisa.shellman
 taichi.vscode-textlint
 toba.vsfire
 tunnckocore.modern-javascript-snippets
