@@ -31,3 +31,6 @@ brew cask install jasper
 # IME, fonts
 brew cask install google-japanese-ime
 brew cask install homebrew/cask-fonts/font-ricty-diminished
+
+# Add symlink
+ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
