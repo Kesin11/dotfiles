@@ -3,7 +3,7 @@
     "editor.tabSize": 2,
     "editor.quickSuggestionsDelay": 5,
     "editor.minimap.enabled": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "vim.hlsearch": true,
     "vim.history": 100,
     "eslint.alwaysShowStatus": true,
@@ -30,10 +30,17 @@
     "editor.codeActionsOnSaveTimeout": 2000,
     "breadcrumbs.enabled": true,
     "workbench.editor.limit.enabled": true,
-    "workbench.editor.limit.value": 3,
+    "workbench.editor.limit.value": 5,
     "yaml.schemaStore.enable": false,
     "yaml.schemas": {
         "http://json.schemastore.org/circleciconfig": ["/.circleci/config.yml"],
         "http://json.schemastore.org/github-workflow": ["/.github/workflows/*.yml"]
-    }
+    },
+    "git.autofetch": true,
+    "search.quickOpen.history.filterSortOrder": "recency",
+    "jest.autoEnable": false,
+    "jest.runAllTestsFirst": false,
+    "jest.enableCodeLens": false,
+    "githubPullRequests.pullRequestTitle": "custom",
+    "githubPullRequests.showInSCM": true
 }
