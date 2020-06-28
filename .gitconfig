@@ -10,7 +10,6 @@
 	st = status
     br = branch
 	hist = log --decorate --graph
-    pco = !git checkout `git branch | peco | cut -d" " -f2`
 ; Enable after install git with homebrew
 ; [pager]
 ;     log = diff-highlight | less
