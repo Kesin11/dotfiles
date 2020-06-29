@@ -1,0 +1,18 @@
+# alias
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+export LS_OPTIONS='--color=auto'
+# eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -hlrt'
+alias la='ls $LS_OPTIONS -hlrta'
+export CLICOLOR=1
+
+# git completion for git installed by yum
+if [ -f /etc/bash_completion.d/git ]; then
+    source /etc/bash_completion.d/git
+    PS1="\u@\h:\W\$(__git_ps1)\$ "
+    export PS1
+fi

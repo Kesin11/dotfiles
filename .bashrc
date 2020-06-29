@@ -1,15 +1,5 @@
-PS1="\u@\h:\W "
+PS1="\u@\h:\W$ "
 export PS1
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias ls='ls -G'
-alias ll='ls -hlrt'
-export CLICOLOR=1
-export LSCOLORS=DxGxcxdxCxegedabagacad
-
-# Ctrl+fでパス文字列を/ごとに削除
-bind '\C-f:unix-filename-rubout'
 
 # tmuxで各シェルの.bash_historyを同期
 export HISTFILE=~/.bash_history

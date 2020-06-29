@@ -1,9 +1,0 @@
-#centosだとlsでの色付けは-Gではなくて--color
-alias ls="ls --color"
-
-# git completion for git installed by yum
-if [ -f /etc/bash_completion.d/git ]; then
-    source /etc/bash_completion.d/git
-    PS1="\u@\h:\W\$(__git_ps1)\$ "
-    export PS1
-fi

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # make synbolic link .vim first, because neobundle will install to .vim
 cd ~/
 ln -is ~/dotfiles/.vim .
