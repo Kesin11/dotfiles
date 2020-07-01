@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# USAGE: source ~/dotfiles/install_for_vscode_container.sh
+# USAGE:
+#   ~/dotfiles/install_vscode_container.sh
+#   source ~/.profile
 
 cd ~/
 ln -fs ~/dotfiles/.inputrc .
