@@ -4,11 +4,8 @@
 
 cd ~/
 ln -fs ~/dotfiles/.inputrc .
+ln -fs ~/dotfiles/.bashrc .
 ln -fs ~/dotfiles/.bashrc_linux .bashrc_local
-
-# dockerイメージにはデフォルトの.bashrcが存在するため、壊さないようにする
-# ln -fs ~/dotfiles/.bashrc .
-source ~/dotfiles/.bashrc
 
 # TODO: ubuntuだったら.bashrc_ubuntuを読み込んで、git diff highlightなどを読み込ませる
 
