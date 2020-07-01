@@ -7,6 +7,5 @@ ln -fs ~/dotfiles/.inputrc .
 ln -fs ~/dotfiles/.bashrc .
 ln -fs ~/dotfiles/.bashrc_linux .bashrc_local
 
-# TODO: ubuntuだったら.bashrc_ubuntuを読み込んで、git diff highlightなどを読み込ませる
 
 echo "-----Finish!!------"
