@@ -42,5 +42,7 @@
     "jest.runAllTestsFirst": false,
     "jest.enableCodeLens": false,
     "githubPullRequests.pullRequestTitle": "custom",
-    "githubPullRequests.showInSCM": true
+    "githubPullRequests.showInSCM": true,
+    "dotfiles.repository": "https://github.com/Kesin11/dotfiles.git",
+    "dotfiles.installCommand": "~/dotfiles/install_vscode_container.sh"
 }
