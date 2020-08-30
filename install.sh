@@ -6,9 +6,7 @@ ln -is ~/dotfiles/.vim .
 
 # NeoBundle
 cd ~/dotfiles
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
-sh ./install.sh
-rm ./install.sh
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | bash
 
 cd ~/
 ln -is ~/dotfiles/.bash_profile .
