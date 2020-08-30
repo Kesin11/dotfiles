@@ -5,11 +5,14 @@
 	ui = auto
 [core]
 	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore_global
 [alias]
 	co = checkout
 	st = status
     br = branch
 	hist = log --decorate --graph
+    sw = switch
+    rs = restore
 ; Enable after install git with homebrew
 ; [pager]
 ;     log = diff-highlight | less
@@ -23,3 +26,5 @@
     autocorrect = 20
 [merge]
     tool = vimdiff
+[rerere]
+	enabled = true
