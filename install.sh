@@ -17,7 +17,7 @@ ln -is ~/dotfiles/.inputrc .
 ln -is ~/dotfiles/.gitconfig .
 
 # tool
-mkdir ~/dotfiles/tool
+mkdir -p ~/dotfiles/tool
 sh ~/dotfiles/tool/setup.sh
 
 if [ `uname` = "Darwin" ]; then
@@ -30,6 +30,9 @@ if [ `uname` = "Darwin" ]; then
 
   # vscode
   sh ~/dotfiles/vscode/setup.sh
+elif [ `uname` = "Linux" ]; then
+  ln -is ~/dotfiles/.bashrc_linux .bashrc_local
+  sh ~/dotfiles/install-git-diff-highlight.sh
 fi
 
 echo "-----Finish!!------"
