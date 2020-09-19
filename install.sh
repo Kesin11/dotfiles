@@ -1,39 +1,19 @@
 #!/bin/bash
 
-# make synbolic link .vim first, because neobundle will install to .vim
-cd ~/
-ln -is ~/dotfiles/.vim .
+# Install script for VSCode Remote Container or Codespaces
 
-# NeoBundle
-cd ~/dotfiles
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | bash
+# Local USAGE:
+#   ~/dotfiles/install.sh
+#   source ~/.profile
 
 cd ~/
-ln -is ~/dotfiles/.bash_profile .
-ln -is ~/dotfiles/.bashrc .
-ln -is ~/dotfiles/.vimrc .
-ln -is ~/dotfiles/.tmux.conf .
-ln -is ~/dotfiles/.inputrc .
-ln -is ~/dotfiles/.gitconfig .
+ln -fs ~/dotfiles/.inputrc .
+ln -fs ~/dotfiles/.bashrc .
+ln -fs ~/dotfiles/.bashrc_linux .bashrc_local
 
-# tool
-mkdir -p ~/dotfiles/tool
-sh ~/dotfiles/tool/setup.sh
+sh ~/dotfiles/install-git-diff-highlight.sh
 
-if [ `uname` = "Darwin" ]; then
-  # KeyRepeat settings
-  defaults write -g InitialKeyRepeat -int 15
-  defaults write -g KeyRepeat -int 2
-
-  ln -is ~/dotfiles/.bashrc_mac .bashrc_local
-  sh ~/dotfiles/brew-install.sh
-
-  # vscode
-  sh ~/dotfiles/vscode/setup.sh
-elif [ `uname` = "Linux" ]; then
-  ln -is ~/dotfiles/.bashrc_linux .bashrc_local
-  sh ~/dotfiles/install-git-diff-highlight.sh
-fi
+# Change timezone
+ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 echo "-----Finish!!------"
-echo "Replace .gitconfig to local one if you need use another one"
