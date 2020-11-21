@@ -10,11 +10,6 @@ alias ll='ls $LS_OPTIONS -hlrt'
 alias la='ls $LS_OPTIONS -hlrta'
 export CLICOLOR=1
 
-# codespace specific
-if [ `whoami` = "codespace" ]; then
-  export TZ="Asia/Tokyo"
-fi
-
 # git completion:
 # debian
 if [ -f /usr/lib/git-core/git-sh-prompt ]; then
@@ -22,3 +17,24 @@ if [ -f /usr/lib/git-core/git-sh-prompt ]; then
     PS1="\u@\h:\W\$(__git_ps1)\$ "
 fi
 export PS1
+
+# codespace specific
+if [ `whoami` = "codespace" ]; then
+  export TZ="Asia/Tokyo"
+# Linux or WSL
+else
+    # ssh-agent for devcontainer
+    # ref: https://code.visualstudio.com/docs/remote/containers#_using-ssh-keys
+    eval "$(ssh-agent -s)"
+    if [ -z "$SSH_AUTH_SOCK" ]; then
+       # Check for a currently running instance of the agent
+       RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+       if [ "$RUNNING_AGENT" = "0" ]; then
+            # Launch a new instance of the agent
+            ssh-agent -s &> .ssh/ssh-agent
+       fi
+       eval `cat .ssh/ssh-agent`
+    fi
+
+    ssh-add
+fi
