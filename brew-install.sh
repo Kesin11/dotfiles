@@ -16,26 +16,26 @@ brew install rbenv
 brew install nvm
 brew install circleci
 brew install peco
-brew cask install google-cloud-sdk
+brew install google-cloud-sdk
 brew install robotsandpencils/made/xcodes
 
 # Dev app
-brew cask install visual-studio-code
-brew cask install iterm2
-brew cask install docker
+brew install visual-studio-code
+brew install iterm2
+brew install docker
 
 # Utility app
-brew cask install boostnote
-brew cask install bettertouchtool
-brew cask install jasper
-brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install divvy
-brew cask install zoomus
+brew install boostnote
+brew install bettertouchtool
+brew install jasper
+brew install google-chrome
+brew install google-chrome-canary
+brew install divvy
+brew install zoomus
 
 # IME, fonts
-brew cask install google-japanese-ime
-brew cask install homebrew/cask-fonts/font-ricty-diminished
+brew install google-japanese-ime
+brew install homebrew/cask-fonts/font-ricty-diminished
 
 # Add symlink
 ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
