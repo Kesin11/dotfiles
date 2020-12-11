@@ -17,6 +17,7 @@ brew install nvm
 brew install circleci
 brew install peco
 brew cask install google-cloud-sdk
+brew install robotsandpencils/made/xcodes
 
 # Dev app
 brew cask install visual-studio-code
@@ -27,6 +28,10 @@ brew cask install docker
 brew cask install boostnote
 brew cask install bettertouchtool
 brew cask install jasper
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install divvy
+brew cask install zoomus
 
 # IME, fonts
 brew cask install google-japanese-ime
