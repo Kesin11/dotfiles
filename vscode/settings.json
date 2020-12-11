@@ -45,5 +45,10 @@
     "githubPullRequests.showInSCM": true,
     "dotfiles.repository": "https://github.com/Kesin11/dotfiles.git",
     "dotfiles.installCommand": "~/dotfiles/install_vscode_container.sh",
-    "remote.containers.logLevel": "debug"
+    "remote.containers.logLevel": "debug",
+    "files.associations": {
+        "Dangerfile*": "ruby",
+        "Fastfile": "ruby"
+    },
+    "workbench.colorTheme": "Visual Studio Dark"
 }
