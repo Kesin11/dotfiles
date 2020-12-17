@@ -22,6 +22,7 @@ brew install google-cloud-sdk
 brew install robotsandpencils/made/xcodes
 brew install ncdu
 brew install pstree
+brew install shellcheck
 
 # Dev app
 brew install visual-studio-code
