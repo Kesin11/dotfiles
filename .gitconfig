@@ -37,3 +37,5 @@
 	autostash = true
 	abbreviateCommands = true
 	autosqaush = true
+[pull]
+        ff = only
