@@ -35,7 +35,6 @@ brew install bettertouchtool
 brew install jasper
 brew install google-chrome
 brew install google-chrome-canary
-brew install divvy
 brew install zoomus
 
 # IME, fonts
