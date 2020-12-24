@@ -36,6 +36,6 @@
 [rebase]
 	autostash = true
 	abbreviateCommands = true
-	autosqaush = true
+	autosquash = true
 [pull]
         ff = only
