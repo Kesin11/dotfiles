@@ -14,7 +14,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " プラグインを記述する
-NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+" neocompleteはVim 8.2+に非対応
+NeoBundle has('lua') && v:version < 802 ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'osyo-manga/unite-quickfix'
@@ -176,7 +177,7 @@ cnoreabbrev vdiff vertical diffsplit
 "----neocomplete or neocomplcache conf
 if neobundle#is_installed('neocomplete')
     source ~/dotfiles/.vimrc.neocomplete
-else
+elseif neobundle#is_installed('neocomplcache')
     source ~/dotfiles/.vimrc.neocomplcache
 endif
 
