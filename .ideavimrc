@@ -1,0 +1,45 @@
+" .vimrcからのコピー
+set number
+set showmode
+syntax enable
+set smartindent
+set smarttab
+set ignorecase
+set smartcase
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set hlsearch
+set laststatus=2
+set statusline=%f\ %{&fileencoding}
+set backspace=indent,eol,start
+set noswapfile
+set incsearch " インクリメントサーチ
+set wildmenu
+set wildmode=longest:full "コマンドモードの補完タイプ
+set noequalalways " 分割時に必ず2分割される
+set virtualedit=block " ビジュアルモードで文字が存在しないところまでカーソル移動か可能になる
+
+" 検索後にジャンプした際に検索単語を画面中央に持ってくる
+nnoremap n nzz
+nnoremap N Nzz
+
+" Ctrl+cをESCに割り当て。Ctrl+cがESCと全く同じ動作になるはず
+inoremap <C-c> <ESC>
+
+" " j, k による移動を折り返されたテキストでも自然に振る舞うように変更
+nnoremap j gj
+nnoremap k gk
+
+" C-p, C-nによる履歴呼び出しにフィルタリングを適用
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+
+" // .vimrcからのコピー
+
+" InteliJ用の設定
+
+" <C-o> means execute one command and return Insert mode
+inoremap <C-v> <C-o>:action $Paste<CR>
