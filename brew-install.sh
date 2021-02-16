@@ -23,6 +23,7 @@ brew install robotsandpencils/made/xcodes
 brew install ncdu
 brew install pstree
 brew install shellcheck
+brew install delta
 
 # Dev app
 brew install visual-studio-code
