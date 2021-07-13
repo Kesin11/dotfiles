@@ -17,38 +17,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " neocompleteはVim 8.2+に非対応
 NeoBundle has('lua') && v:version < 802 ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'osyo-manga/unite-quickfix'
-NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimfiler'
 
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-localrc'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tyru/open-browser-github.vim', {'depends': 'tyru/open-browser.vim'}
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'haya14busa/incsearch.vim'
-
-NeoBundle 'JavaScript-syntax'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'elzr/vim-json'
-
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'vim-perl/vim-perl'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
 
 call neobundle#end()
 
@@ -187,14 +165,6 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" SuperTab like snippets behavior.
-" imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)"
-" \: pumvisible() ? "\<C-n>" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)"
-" \: "\<TAB>"
-
 " For snippet_complete marker.
 if has('conceal')
   set conceallevel=2 concealcursor=i
@@ -202,20 +172,6 @@ endif
 
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/snippets'
-
-"----Syntastic conf
-let g:syntastic_mode_map = { 'mode': 'active',
-	\ 'active_filetypes' : [],
-	\ 'passive_filetypes' : ['html'] }
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_python_python_exec = system('which python3')
-let g:syntastic_python_checkers = ['pyflakes', 'mypy']
-let g:syntastic_perl_checkers=['perl']
-let g:syntastic_coffee_checkers=['coffeelint']
-let g:syntastic_enable_perl_checker = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_aggregate_errors = 1
 
 "----unite conf
 nnoremap [unite]    <Nop>
@@ -268,20 +224,6 @@ set splitbelow
 " 縦分割時は右へ新しいウィンドウを開く
 set splitright
 
-"----taglist conf
-":Tlistでタグリストオープン
-
-" 現在表示中のファイルのみのタグしか表示しない
-let Tlist_Show_One_File = 1
-" 右側にtag listのウインドを表示する
-let Tlist_Use_Right_Window = 1
-" taglistのウインドウだけならVimを閉じる
-let Tlist_Exit_OnlyWindow = 1
-
-"----perl tidy conf
-nnoremap ,pt <Esc>:%! perltidy -se<CR>
-vnoremap ,pt <Esc>:'<,'>! perltidy -se<CR>
-
 "----lightline conf
 let g:lightline = {
     \ 'colorscheme': 'wombat' }
@@ -304,18 +246,5 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)u
 
-"----coffee-script
-autocmd FileType coffee setlocal sw=2 sts=2 ts=2 et
-
-" QuickRunのcoffee
-let g:quickrun_config = {}
-let g:quickrun_config['coffee'] = {
-\'command' : 'coffee',
-\'exec' : ['%c -cbp %s']
-\}
-
-"----javascript
-"JSONを開いた時にダブルクォーテーションが隠されるVim標準機能をvim-jsonで無効化
-let g:vim_json_syntax_conceal = 0
 
 filetype plugin indent on
