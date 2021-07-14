@@ -35,6 +35,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'haya14busa/incsearch.vim'
 
+NeoBundle 'elzr/vim-json'
 call neobundle#end()
 
 " Required:
@@ -287,5 +288,8 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)u
 
+"----javascript
+"JSONを開いた時にダブルクォーテーションが隠されるVim標準機能をvim-jsonで無効化
+let g:vim_json_syntax_conceal = 0
 
 filetype plugin indent on
