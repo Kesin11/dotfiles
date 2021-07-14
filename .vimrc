@@ -14,8 +14,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " プラグインを記述する
-" neocompleteはVim 8.2+に非対応
-NeoBundle has('lua') && v:version < 802 ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+NeoBundle 'prabirshrestha/asyncomplete.vim'
+NeoBundle 'prabirshrestha/asyncomplete-buffer.vim'
+NeoBundle 'prabirshrestha/asyncomplete-neosnippet.vim'
+NeoBundle 'prabirshrestha/asyncomplete-file.vim'
+NeoBundle 'Shougo/neco-syntax'
+NeoBundle 'prabirshrestha/asyncomplete-necosyntax.vim'
+NeoBundle 'Shougo/neco-vim'
+NeoBundle 'prabirshrestha/asyncomplete-necovim.vim'
+
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -152,12 +159,46 @@ cnoreabbrev vdiff vertical diffsplit
 
 "----global conf
 
-"----neocomplete or neocomplcache conf
-if neobundle#is_installed('neocomplete')
-    source ~/dotfiles/.vimrc.neocomplete
-elseif neobundle#is_installed('neocomplcache')
-    source ~/dotfiles/.vimrc.neocomplcache
-endif
+" ----asyncomplete"
+let g:asyncomplete_min_chars = 2
+let g:asyncomplete_matchfuzzy = 0
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'allowlist': ['*'],
+    \ 'blocklist': ['go'],
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ 'config': {
+    \    'max_buffer_size': 5000000,
+    \  },
+    \ }))
+
+call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_options({
+    \ 'name': 'neosnippet',
+    \ 'allowlist': ['*'],
+    \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
+    \ }))
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    \ 'name': 'file',
+    \ 'allowlist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#file#completor')
+    \ }))
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necosyntax#get_source_options({
+    \ 'name': 'necosyntax',
+    \ 'allowlist': ['*'],
+    \ 'completor': function('asyncomplete#sources#necosyntax#completor'),
+    \ }))
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#necovim#get_source_options({
+    \ 'name': 'necovim',
+    \ 'allowlist': ['vim'],
+    \ 'completor': function('asyncomplete#sources#necovim#completor'),
+    \ }))
+
 
 "----neosnippet conf
 " Plugin key-mappings.
