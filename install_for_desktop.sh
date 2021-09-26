@@ -34,7 +34,6 @@ if [ `uname` = "Darwin" ]; then
   sh ~/dotfiles/vscode/setup.sh
 elif [ `uname` = "Linux" ]; then
   ln -is ~/dotfiles/.bashrc_linux .bashrc_local
-  sh ~/dotfiles/install-git-diff-highlight.sh
 fi
 
 echo "-----Finish!!------"

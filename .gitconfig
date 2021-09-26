@@ -9,21 +9,21 @@
 [alias]
 	co = checkout
 	st = status
-    br = branch
+	br = branch
 	hist = log --decorate --graph
 	histp = log --decorate -p
-    logp = log --decorate -p
-    sw = switch
-    rs = restore
+	logp = log --decorate -p
+	sw = switch
+	rs = restore
 ; Enable after install git with homebrew
-; [pager]
+[pager]
 ;     log = diff-highlight | less
 ;     show = diff-highlight | less
 ;     diff = diff-highlight | less
 ; Enable after install delta
-;     log = delta --color-only
-;     show = delta --features decorations
-;     diff = delta --features decorations
+	log = delta --color-only
+	show = delta --features decorations
+	diff = delta --features decorations
 [diff]
 	tool = vimdiff
 [difftool]
@@ -45,14 +45,14 @@
 	autosquash = true
 [pull]
     ff = only
-; [interactive]
-;     diffFilter = delta --color-only
-; [delta]
-;     colorMoved = default
-;     # features = decorations
-;     whitespace-error-style = 22 reverse
-; [delta "decorations"]
-;     line-numbers = true
-;     commit-decoration-style = bold yellow box ul
-;     file-style = bold yellow ul
-;     file-decoration-style = none
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    colorMoved = default
+    # features = decorations
+    whitespace-error-style = 22 reverse
+[delta "decorations"]
+    line-numbers = true
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
