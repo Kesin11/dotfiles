@@ -1,4 +1,5 @@
 #!/bin/bash
+set -u
 
 # Install script for VSCode Remote Container or Codespaces
 
@@ -9,9 +10,11 @@
 if [[ $(devcontainer-info | grep -i codespaces) ]]; then
    echo "Setup for Codespaces..."
    IS_CODESPACES=1
+   BIN_DIR=/home/codespace/.local/bin
 else
    echo "Setup for Ubuntu based devcontainer..."
    IS_DEVCONTAINER=1
+   BIN_DIR=/usr/local/bin
 fi
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
@@ -25,15 +28,13 @@ ln -fs $SCRIPT_DIR/.gitconfig .
 
 # Setup tools
 echo "Install git-delta..."
-if [ ! -e /usr/local/bin/delta ]; then
+if [ ! -e $BIN_DIR/delta ]; then
    wget -q -O /tmp/delta.tar.gz https://github.com/dandavison/delta/releases/download/0.8.3/delta-0.8.3-x86_64-unknown-linux-gnu.tar.gz
    tar zxvf /tmp/delta.tar.gz -C /tmp/
-   mv /tmp/delta-0.8.3-x86_64-unknown-linux-gnu/delta /usr/local/bin/
+   mv /tmp/delta-0.8.3-x86_64-unknown-linux-gnu/delta "${BIN_DIR}/"
 fi
 
 # Change timezone
-if [[ -n "${IS_DEVCONTAINER}" ]]; then
-   ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-fi
+sudo ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 echo "-----Finish!!------"
