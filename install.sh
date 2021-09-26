@@ -21,9 +21,7 @@ ln -fs $SCRIPT_DIR/.inputrc .
 # Use default .bashrc in Codespaces or devcontainer environment
 # ln -fs $SCRIPT_DIR/.bashrc .
 # ln -fs $SCRIPT_DIR/.bashrc_linux .bashrc_local
-if [[ -n "${IS_DEVCONTAINER}" ]]; then
-   ln -is $SCRIPT_DIR/.gitconfig .
-fi
+ln -fs $SCRIPT_DIR/.gitconfig .
 
 # Setup tools
 echo "Install git-delta..."
