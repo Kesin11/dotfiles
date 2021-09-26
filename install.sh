@@ -6,10 +6,21 @@
 #   ~/dotfiles/install.sh
 #   source ~/.profile
 
+if [[ $(devcontainer-info | grep -i codespaces) ]]; then
+   echo "Setup for Codespaces..."
+   IS_CODESPACES=1
+else
+   echo "Setup for Ubuntu based devcontainer..."
+   IS_DEVCONTAINER=1
+fi
+
 cd ~/
 ln -fs ~/dotfiles/.inputrc .
 ln -fs ~/dotfiles/.bashrc .
 ln -fs ~/dotfiles/.bashrc_linux .bashrc_local
+if [[ -n "${IS_DEVCONTAINER}" ]]; then
+   ln -is ~/dotfiles/.gitconfig .
+fi
 
 # Setup tools
 echo "Install git-delta..."
@@ -20,6 +31,8 @@ if [ ! -e /usr/local/bin/delta ]; then
 fi
 
 # Change timezone
-ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+if [[ -n "${IS_DEVCONTAINER}" ]]; then
+   ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+fi
 
 echo "-----Finish!!------"
