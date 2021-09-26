@@ -14,12 +14,15 @@ else
    IS_DEVCONTAINER=1
 fi
 
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
+
 cd ~/
-ln -fs ~/dotfiles/.inputrc .
-ln -fs ~/dotfiles/.bashrc .
-ln -fs ~/dotfiles/.bashrc_linux .bashrc_local
+ln -fs $SCRIPT_DIR/.inputrc .
+# Use default .bashrc in Codespaces or devcontainer environment
+# ln -fs $SCRIPT_DIR/.bashrc .
+# ln -fs $SCRIPT_DIR/.bashrc_linux .bashrc_local
 if [[ -n "${IS_DEVCONTAINER}" ]]; then
-   ln -is ~/dotfiles/.gitconfig .
+   ln -is $SCRIPT_DIR/.gitconfig .
 fi
 
 # Setup tools
