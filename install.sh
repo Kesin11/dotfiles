@@ -31,7 +31,7 @@ echo "Install git-delta..."
 if [ ! -e $BIN_DIR/delta ]; then
    wget -q -O /tmp/delta.tar.gz https://github.com/dandavison/delta/releases/download/0.8.3/delta-0.8.3-x86_64-unknown-linux-gnu.tar.gz
    tar zxvf /tmp/delta.tar.gz -C /tmp/
-   mv /tmp/delta-0.8.3-x86_64-unknown-linux-gnu/delta "${BIN_DIR}/"
+   sudo mv /tmp/delta-0.8.3-x86_64-unknown-linux-gnu/delta "${BIN_DIR}/"
 fi
 
 # Change timezone
