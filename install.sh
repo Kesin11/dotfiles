@@ -21,10 +21,15 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 
 cd ~/
 ln -fs $SCRIPT_DIR/.inputrc .
+ln -fs $SCRIPT_DIR/.gitconfig .
 # Use default .bashrc in Codespaces or devcontainer environment
 # ln -fs $SCRIPT_DIR/.bashrc .
 # ln -fs $SCRIPT_DIR/.bashrc_linux .bashrc_local
-ln -fs $SCRIPT_DIR/.gitconfig .
+
+# but add little config to default .bashrc
+echo '---- Append config from install.sh ---'
+echo 'export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"' >> ~/.bashrc
+echo 'shopt -u histappend' >> ~/.bashrc
 
 # Setup tools
 echo "Install git-delta..."
