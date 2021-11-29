@@ -9,7 +9,7 @@
 [alias]
 	co = checkout
 	st = status
-	br = branch
+    br = branch --sort=-authordate
 	hist = log --decorate --graph
 	histp = log --decorate -p
 	logp = log --decorate -p
