@@ -7,6 +7,10 @@ fi
 # debian
 if [ -f /usr/lib/git-core/git-sh-prompt ]; then
     source /usr/lib/git-core/git-sh-prompt
-    PS1="\u@\h:\W\$(__git_ps1)\$ "
+    PS1="\[\033[01;32m\]\u@\h:\W\$(__git_ps1)\[\033[00m\]\$ "
 fi
 export PS1
+
+if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
