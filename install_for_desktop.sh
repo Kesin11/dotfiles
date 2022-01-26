@@ -17,6 +17,9 @@ ln -is ~/dotfiles/.vimrc .
 ln -is ~/dotfiles/.tmux.conf .
 ln -is ~/dotfiles/.inputrc .
 ln -is ~/dotfiles/.gitconfig .
+ln -is ~/dotfiles/.gitignore_global .
+ln -is ~/dotfiles/.dircolors .
+ln -is ~/dotfiles/.bash_aliases .
 
 # tool
 mkdir -p ~/dotfiles/tool
