@@ -1,7 +1,8 @@
 #swhich PATH for MacPorts or homebrew
-if [ -e /usr/local/Library/Homebrew ]; then # for old homebrew
-    export PATH=/usr/local/bin:$PATH
-elif [ -e /usr/local/Homebrew ]; then # for newer homebrew
+
+if [ "$(uname -m)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -e /usr/local/Homebrew ]; then
     export PATH=/usr/local/bin:$PATH
 fi
 
