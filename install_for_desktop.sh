@@ -32,9 +32,6 @@ if [ `uname` = "Darwin" ]; then
 
   ln -is ~/dotfiles/.bashrc_mac .bashrc_local
   sh ~/dotfiles/brew-install.sh
-
-  # vscode
-  sh ~/dotfiles/vscode/setup.sh
 elif [ `uname` = "Linux" ]; then
   ln -is ~/dotfiles/.bashrc_linux .bashrc_local
 fi
