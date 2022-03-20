@@ -22,7 +22,7 @@ cask "visual-studio-code"
 cask "iterm2"
 cask "google-cloud-sdk"
 brew "robotsandpencils/made/xcodes"
-brew "awscli" 
+brew "awscli"
 # cask "docker"
 
 # Utility app
@@ -30,8 +30,8 @@ cask "boostnote"
 cask "bettertouchtool"
 cask "jasper"
 cask "google-chrome"
-cask "google-chrome-canary"
-cask "zoomus"
+cask "homebrew/cask-versions/google-chrome-canary"
+cask "zoom"
 
 # IME, fonts
 cask "google-japanese-ime"

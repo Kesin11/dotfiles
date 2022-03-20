@@ -15,6 +15,8 @@ fi
 brew update
 cd $script_dir
 brew bundle
+
+echo "Run brew doctor..."
 brew doctor
 
 # Add symlink
