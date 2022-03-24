@@ -13,6 +13,7 @@ brew "shellcheck"
 brew "git-delta"
 brew "yq"
 brew "tfenv"
+brew "kubectl"
 brew "kustomize"
 
 # Dev app
