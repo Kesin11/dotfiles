@@ -1,7 +1,5 @@
 # CLI
-# この2つが相性悪い？それとも単に順番の問題か
 brew "git"
-brew "bash-completion"
 brew "git-lfs"
 brew "gh"
 brew "jq"
