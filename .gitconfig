@@ -15,6 +15,7 @@
 	logp = log --decorate -p
 	sw = switch
 	rs = restore
+    sha = !"f() { git rev-parse "${1-HEAD}"; }; f"
 ; Enable after install git with homebrew
 [pager]
 ;     log = diff-highlight | less
