@@ -22,6 +22,7 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 cd ~/
 ln -fs $SCRIPT_DIR/.inputrc .
 ln -fs $SCRIPT_DIR/.gitconfig .
+ln -fs $SCRIPT_DIR/.gitignore_global .
 # Use default .bashrc in Codespaces or devcontainer environment
 # ln -fs $SCRIPT_DIR/.bashrc .
 # ln -fs $SCRIPT_DIR/.bashrc_linux .bashrc_local
