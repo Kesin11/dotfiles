@@ -10,6 +10,6 @@ sh ~/dotfiles/install.sh
 ```bash
 sh ~/dotfiles/install_for_desktop.sh
 
-# only macOS
-sh ~/dotfiles/brew-install.sh
+# Install homebrew or linuxbrew
+bash ~/dotfiles/brew-install.sh
 ```
