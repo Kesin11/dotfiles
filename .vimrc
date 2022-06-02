@@ -33,7 +33,7 @@ NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'haya14busa/incsearch.vim'
+" NeoBundle 'haya14busa/incsearch.vim'
 
 NeoBundle 'elzr/vim-json'
 call neobundle#end()
@@ -284,9 +284,9 @@ let g:lightline.tabline = {
     \ 'right': [ [ 'close' ] ] }
 
 "----incsearch.vim
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)u
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)u
 
 "----javascript
 "JSONを開いた時にダブルクォーテーションが隠されるVim標準機能をvim-jsonで無効化
