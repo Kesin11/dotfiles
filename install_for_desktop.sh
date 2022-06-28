@@ -2,13 +2,13 @@
 
 # Install script for macOS or desktop Linux
 
-# make synbolic link .vim first, because neobundle will install to .vim
+# make synbolic link .vim first, because minpac will be installed into ~/.vim/
 cd ~/
 ln -is ~/dotfiles/.vim .
 
-# NeoBundle
+# minpac
 cd ~/dotfiles
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | bash
+git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 
 cd ~/
 ln -is ~/dotfiles/.bash_profile .
