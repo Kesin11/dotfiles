@@ -1,52 +1,47 @@
-"—-neobundle conf start
-if has('vim_starting')
-   set nocompatible               " Be iMproved
-
-   " Required:
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
+"—-minpac conf start
+if &compatible
+  set nocompatible
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+" Add other plugins here.
+call minpac#add('prabirshrestha/asyncomplete.vim')
+call minpac#add('prabirshrestha/asyncomplete-buffer.vim')
+call minpac#add('prabirshrestha/asyncomplete-neosnippet.vim')
+call minpac#add('prabirshrestha/asyncomplete-file.vim')
+call minpac#add('Shougo/neco-syntax')
+call minpac#add('prabirshrestha/asyncomplete-necosyntax.vim')
+call minpac#add('Shougo/neco-vim')
+call minpac#add('prabirshrestha/asyncomplete-necovim.vim')
 
-" プラグインを記述する
-NeoBundle 'prabirshrestha/asyncomplete.vim'
-NeoBundle 'prabirshrestha/asyncomplete-buffer.vim'
-NeoBundle 'prabirshrestha/asyncomplete-neosnippet.vim'
-NeoBundle 'prabirshrestha/asyncomplete-file.vim'
-NeoBundle 'Shougo/neco-syntax'
-NeoBundle 'prabirshrestha/asyncomplete-necosyntax.vim'
-NeoBundle 'Shougo/neco-vim'
-NeoBundle 'prabirshrestha/asyncomplete-necovim.vim'
+call minpac#add('Shougo/unite.vim')
+call minpac#add('Shougo/neosnippet')
+call minpac#add('Shougo/neosnippet-snippets')
+call minpac#add('Shougo/vimfiler')
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimfiler'
+call minpac#add('thinca/vim-quickrun')
+call minpac#add('LeafCage/yankround.vim')
+call minpac#add('tomtom/tcomment_vim')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('itchyny/lightline.vim')
 
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'itchyny/lightline.vim'
-" NeoBundle 'haya14busa/incsearch.vim'
+call minpac#add('elzr/vim-json')
 
-NeoBundle 'elzr/vim-json'
-call neobundle#end()
+" 初期セットアップ直後は自動でインストールを行う
+if empty(glob('~/.vim/pack/minpac/start/*'))
+    call minpac#update()
+endif
 
-" Required:
-filetype off
-filetype plugin indent off
+" optionalらしいが、無しだとasynccompleteの設定あたりでエラーになるのでここで全てロードする
+packloadall
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" MEMO: プラグインのインストールやアップデートは以下のコマンドを実行する
+" call minpac#update()
+"—-minpac conf end
 
-"—-neobundle conf end
 
 "----global conf
 set number

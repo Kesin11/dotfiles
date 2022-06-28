@@ -1,4 +1,5 @@
 .vim/bundle
+.vim/pack/
 .DS_Store
 tool/*
 !setup.sh
