@@ -6,6 +6,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	autoCRLF = false
 [alias]
 	co = checkout
 	st = status
@@ -57,3 +58,5 @@
     commit-decoration-style = bold yellow box ul
     file-style = bold yellow ul
     file-decoration-style = none
+[commit]
+	verbose = true
