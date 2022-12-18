@@ -60,3 +60,6 @@
     file-decoration-style = none
 [commit]
 	verbose = true
+[push]
+	autoSetupRemote = true
+	useForceIfIncludes = true
