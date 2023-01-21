@@ -23,9 +23,9 @@
 ;     show = diff-highlight | less
 ;     diff = diff-highlight | less
 ; Enable after install delta
-	log = delta --color-only
-	show = delta --features decorations
-	diff = delta --features decorations
+;	log = delta --color-only
+;	show = delta --features decorations
+;	diff = delta --features decorations
 [diff]
 	tool = vimdiff
 [difftool]
