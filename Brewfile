@@ -22,11 +22,10 @@ cask "iterm2"
 cask "google-cloud-sdk"
 brew "robotsandpencils/made/xcodes"
 brew "awscli"
-brew "ocker-credential-helper-ecr"
+brew "docker-credential-helper-ecr"
 # cask "docker"
 
 # Utility app
-cask "boostnote"
 cask "bettertouchtool"
 cask "jasper"
 cask "google-chrome"
