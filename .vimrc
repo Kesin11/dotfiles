@@ -30,6 +30,8 @@ call minpac#add('itchyny/lightline.vim')
 
 call minpac#add('elzr/vim-json')
 
+call minpac#add('modsound/gips-vim')
+
 " 初期セットアップ直後は自動でインストールを行う
 if empty(glob('~/.vim/pack/minpac/start/*'))
     call minpac#update()
