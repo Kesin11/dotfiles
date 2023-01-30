@@ -1,6 +1,8 @@
 [user]
 	name = Kenta Kase
 	email = kesin1202000@gmail.com
+[init]
+	defaultBranch = main
 [color]
 	ui = auto
 [core]
