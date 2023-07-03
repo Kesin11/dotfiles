@@ -30,8 +30,10 @@ cask "bettertouchtool"
 cask "jasper"
 cask "google-chrome"
 cask "homebrew/cask-versions/google-chrome-canary"
+cask "slack"
 cask "zoom"
 cask "skitch"
+cask "obsidian"
 
 # IME, fonts
 cask "google-japanese-ime"
