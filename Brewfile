@@ -23,7 +23,7 @@ cask "google-cloud-sdk"
 brew "robotsandpencils/made/xcodes"
 brew "awscli"
 brew "docker-credential-helper-ecr"
-# cask "docker"
+brew "lima"
 
 # Utility app
 cask "bettertouchtool"
@@ -31,6 +31,7 @@ cask "jasper"
 cask "google-chrome"
 cask "homebrew/cask-versions/google-chrome-canary"
 cask "zoom"
+cask "skitch"
 
 # IME, fonts
 cask "google-japanese-ime"
@@ -42,3 +43,4 @@ cask "homebrew/cask-fonts/font-ricty-diminished"
 # cask "virtualbox"
 # cask "virtualbox-extension-pack"
 # cask "multipass"
+# cask "rancher"
