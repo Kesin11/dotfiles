@@ -15,6 +15,9 @@ brew "yq"
 brew "tfenv"
 brew "kubectl"
 brew "kustomize"
+brew "helm"
+brew "asdf"
+brew "direnv"
 
 # Dev app
 cask "visual-studio-code"
