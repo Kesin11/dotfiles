@@ -1,6 +1,8 @@
 [user]
 	name = Kenta Kase
 	email = kesin1202000@gmail.com
+# [includeIf "gitdir:~/github/com/kesin11/**"]
+#     path = ~/github/com/kesin11/.gitconfig
 [init]
 	defaultBranch = main
 [color]
