@@ -40,6 +40,10 @@ if [ ! -e $BIN_DIR/delta ]; then
    sudo mv /tmp/delta-0.8.3-x86_64-unknown-linux-gnu/delta "${BIN_DIR}/"
 fi
 
+# https://asdf-vm.com/guide/getting-started.html
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+
 # Change timezone
 sudo ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
