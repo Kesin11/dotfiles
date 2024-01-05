@@ -41,8 +41,11 @@ if [ ! -e $BIN_DIR/delta ]; then
 fi
 
 # https://asdf-vm.com/guide/getting-started.html
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo "Install asdf..."
+if [ ! -d "${HOME}/.asdf" ]; then
+   git clone https://github.com/asdf-vm/asdf.git ${HOME}/.asdf
+   echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+fi
 
 # Change timezone
 sudo ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
