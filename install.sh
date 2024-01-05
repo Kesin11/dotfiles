@@ -23,6 +23,7 @@ cd ~/
 ln -fs $SCRIPT_DIR/.inputrc .
 ln -fs $SCRIPT_DIR/.gitconfig .
 ln -fs $SCRIPT_DIR/.gitignore_global .
+ln -fs $SCRIPT_DIR/aqua.yaml .
 # Use default .bashrc in Codespaces or devcontainer environment
 # ln -fs $SCRIPT_DIR/.bashrc .
 # ln -fs $SCRIPT_DIR/.bashrc_linux .bashrc_local
@@ -33,12 +34,13 @@ echo 'export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND
 echo 'shopt -u histappend' >> ~/.bashrc
 
 # Setup tools
-echo "Install git-delta..."
-if [ ! -e $BIN_DIR/delta ]; then
-   wget -q -O /tmp/delta.tar.gz https://github.com/dandavison/delta/releases/download/0.8.3/delta-0.8.3-x86_64-unknown-linux-gnu.tar.gz
-   tar zxvf /tmp/delta.tar.gz -C /tmp/
-   sudo mv /tmp/delta-0.8.3-x86_64-unknown-linux-gnu/delta "${BIN_DIR}/"
-fi
+curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.2.0/aqua-installer | bash
+echo 'export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH' >> ~/.bashrc
+echo 'export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml' >> ~/.bashrc
+
+# Install tools from aqua.yaml with aqua global install
+export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
+aqua i -l -a
 
 # https://asdf-vm.com/guide/getting-started.html
 echo "Install asdf..."
