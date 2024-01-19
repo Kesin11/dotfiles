@@ -11,3 +11,4 @@ registries:
   ref: v4.113.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: dandavison/delta@0.16.5
+- name: aquasecurity/trivy@v0.48.3
