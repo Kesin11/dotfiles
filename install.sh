@@ -34,6 +34,13 @@ echo 'export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND
 echo 'shopt -u histappend' >> ~/.bashrc
 
 # Setup tools
+# https://asdf-vm.com/guide/getting-started.html
+echo "Install asdf..."
+if [ ! -d "${HOME}/.asdf" ]; then
+   git clone https://github.com/asdf-vm/asdf.git ${HOME}/.asdf
+   echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+fi
+# https://aquaproj.github.io/docs/products/aqua-installer#shell-script
 curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.2.0/aqua-installer | bash
 echo 'export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH' >> ~/.bashrc
 echo 'export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml' >> ~/.bashrc
@@ -41,13 +48,6 @@ echo 'export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml' >> ~/.bashrc
 # Install tools from aqua.yaml with aqua global install
 export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
 aqua i -l -a
-
-# https://asdf-vm.com/guide/getting-started.html
-echo "Install asdf..."
-if [ ! -d "${HOME}/.asdf" ]; then
-   git clone https://github.com/asdf-vm/asdf.git ${HOME}/.asdf
-   echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
-fi
 
 # Change timezone
 sudo ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
