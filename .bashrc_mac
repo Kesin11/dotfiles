@@ -56,3 +56,7 @@ if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then source "$HOME/googl
 
 # flutter
 export PATH=$PATH:$HOME/flutter/flutter/bin
+
+# aqua
+export PATH="$(aqua root-dir)/bin:$PATH"
+export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml

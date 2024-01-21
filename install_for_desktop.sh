@@ -20,6 +20,7 @@ ln -is ~/dotfiles/.gitconfig .
 ln -is ~/dotfiles/.gitignore_global .
 ln -is ~/dotfiles/.dircolors .
 ln -is ~/dotfiles/.bash_aliases .
+ln -fs ~/dotfiles/aqua.yaml .
 
 # tool
 mkdir -p ~/dotfiles/tool
