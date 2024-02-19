@@ -29,6 +29,8 @@
 	log = delta --color-only
 	show = delta --features decorations
 	diff = delta --features decorations
+[log]
+    date = iso
 [diff]
 	tool = vimdiff
 [difftool]
