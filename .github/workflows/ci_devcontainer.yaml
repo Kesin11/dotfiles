@@ -7,12 +7,14 @@ on:
       - ".github/workflows/ci_devcontainer.yaml"
       - ".devcontainer/**"
       - "install.sh"
+      - "aqua.yaml"
   push:
     branches: [master]
     paths:
       - ".github/workflows/ci_devcontainer.yaml"
       - ".devcontainer/**"
       - "install.sh"
+      - "aqua.yaml"
   workflow_dispatch:
 
 permissions:
