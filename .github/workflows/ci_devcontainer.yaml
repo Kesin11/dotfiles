@@ -1,0 +1,32 @@
+name: CI Dev Container
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - ".github/workflows/ci_devcontainer.yaml"
+      - ".devcontainer/**"
+      - "install.sh"
+      - "aqua.yaml"
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/ci_devcontainer.yaml"
+      - ".devcontainer/**"
+      - "install.sh"
+      - "aqua.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run_install_script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run make ci-build in dev container
+        uses: devcontainers/ci@v0.3
+        with:    
+          push: never
+          runCmd: ./install.sh
