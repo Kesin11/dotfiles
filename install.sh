@@ -41,7 +41,7 @@ if [ ! -d "${HOME}/.asdf" ]; then
    echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 fi
 # https://aquaproj.github.io/docs/products/aqua-installer#shell-script
-curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.2.0/aqua-installer | bash
+curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.0.1/aqua-installer | bash
 echo 'export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH' >> ~/.bashrc
 echo 'export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml' >> ~/.bashrc
 
