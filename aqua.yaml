@@ -12,3 +12,5 @@ registries:
 packages:
 - name: dandavison/delta@0.16.5
 - name: aquasecurity/trivy@v0.48.3
+- name: ast-grep/ast-grep@0.19.3
+- name: suzuki-shunsuke/pinact@v0.1.2
