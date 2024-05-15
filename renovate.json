@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>Kesin11/renovate-config:oss",
+    "github>aquaproj/aqua-renovate-config#2.2.1",
+    "schedule:monthly"
+  ],
+  "packageRules": [
+    {
+      "groupName": "All packages managed by aqua",
+      "matchFileNames": ["aqua.yaml"]
+    }
+  ]
+}
