@@ -21,6 +21,7 @@
 	sw = switch
 	rs = restore
 	sha = !"f() { git rev-parse "${1-HEAD}"; }; f"
+	pushf = push --force-with-lease --force-if-includes
 [pager]
 ;     log = diff-highlight | less
 ;     show = diff-highlight | less
@@ -30,7 +31,7 @@
 	show = delta --features decorations
 	diff = delta --features decorations
 [log]
-    date = iso
+	date = iso
 [diff]
 	tool = vimdiff
 [difftool]
