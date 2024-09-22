@@ -16,3 +16,4 @@ packages:
 - name: suzuki-shunsuke/pinact@v0.2.1
 - name: suzuki-shunsuke/ghalint@v0.2.12
 - name: rhysd/actionlint@v1.7.1
+- name: jdx/mise@v2024.9.6
