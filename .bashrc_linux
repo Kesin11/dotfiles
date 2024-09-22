@@ -13,4 +13,10 @@ export PS1
 
 if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
+    export HOMEBREW_VERIFY_ATTESTATIONS=1
 fi
+
+# aqua
+export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
+export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml
