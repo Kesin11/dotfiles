@@ -22,10 +22,6 @@ ln -is ~/dotfiles/.dircolors .
 ln -is ~/dotfiles/.bash_aliases .
 ln -fs ~/dotfiles/aqua.yaml .
 
-# tool
-mkdir -p ~/dotfiles/tool
-sh ~/dotfiles/tool/setup.sh
-
 if [ `uname` = "Darwin" ]; then
   # KeyRepeat settings
   defaults write -g InitialKeyRepeat -int 15
