@@ -17,7 +17,6 @@ cask "google-cloud-sdk"
 cask "xcodes"
 brew "awscli"
 brew "docker-credential-helper-ecr"
-brew "lima"
 
 # Utility app
 cask "bettertouchtool"
