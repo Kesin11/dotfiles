@@ -17,3 +17,5 @@ packages:
 - name: suzuki-shunsuke/ghalint@v0.2.12
 - name: rhysd/actionlint@v1.7.3
 - name: jdx/mise@v2024.9.13
+# VSCodeのdeno extensionがなぜか /home/kesin/.local/share/mise/deno を参照せずにaquaを見るのでやむを得ず追加
+- name: denoland/deno@v2.0.2
