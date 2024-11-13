@@ -11,9 +11,10 @@ registries:
   ref: v4.246.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: dandavison/delta@0.18.2
-- name: aquasecurity/trivy@v0.56.2
+- name: aquasecurity/trivy@v0.57.0
 - name: ast-grep/ast-grep@0.29.0
 - name: suzuki-shunsuke/pinact@v0.2.1
 - name: suzuki-shunsuke/ghalint@v0.2.12
 - name: rhysd/actionlint@v1.7.3
 - name: jdx/mise@v2024.10.13
+- name: google/go-jsonnet@v0.20.0
