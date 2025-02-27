@@ -17,6 +17,6 @@ packages:
 - name: suzuki-shunsuke/pinact@v1.2.0
 - name: suzuki-shunsuke/ghalint@v1.2.1
 - name: rhysd/actionlint@v1.7.7
-- name: jdx/mise@v2024.12.24
+- name: jdx/mise@v2025.2.9
 - name: google/go-jsonnet@v0.20.0
 - name: earthly/earthly@v0.8.15
