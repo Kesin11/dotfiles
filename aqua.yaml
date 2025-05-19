@@ -14,7 +14,7 @@ packages:
 - name: dandavison/delta@0.18.2
 - name: aquasecurity/trivy@v0.62.0
 - name: ast-grep/ast-grep@0.37.0
-- name: suzuki-shunsuke/pinact@v1.6.0
+- name: suzuki-shunsuke/pinact@v3.1.2
 - name: suzuki-shunsuke/ghalint@v1.3.0
 - name: rhysd/actionlint@v1.7.7
 - name: google/go-jsonnet@v0.20.0
