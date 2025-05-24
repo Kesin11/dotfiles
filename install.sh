@@ -34,14 +34,14 @@ echo 'export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND
 echo 'shopt -u histappend' >> ~/.bashrc
 
 # Setup tools
-# https://asdf-vm.com/guide/getting-started.html
-echo "Install asdf..."
-if [ ! -d "${HOME}/.asdf" ]; then
-   git clone https://github.com/asdf-vm/asdf.git ${HOME}/.asdf
-   echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
-fi
+
+# https://mise.jdx.dev/getting-started.html
+echo "Install mise..."
+curl https://mise.run | sh
+echo "eval \"\$(/home/codespace/.local/bin/mise activate bash)\"" >> ~/.bashrc
+
 # https://aquaproj.github.io/docs/products/aqua-installer#shell-script
-curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.0.1/aqua-installer | bash
+curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.2/aqua-installer | bash
 echo 'export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH' >> ~/.bashrc
 echo 'export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml' >> ~/.bashrc
 
