@@ -9,13 +9,13 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.374.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.381.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: dandavison/delta@0.18.2
 - name: aquasecurity/trivy@v0.63.0
-- name: ast-grep/ast-grep@0.38.3
-- name: suzuki-shunsuke/pinact@v3.1.2
-- name: suzuki-shunsuke/ghalint@v1.4.1
+- name: ast-grep/ast-grep@0.38.6
+- name: suzuki-shunsuke/pinact@v3.3.0
+- name: suzuki-shunsuke/ghalint@v1.5.1
 - name: rhysd/actionlint@v1.7.7
 - name: google/go-jsonnet@v0.21.0
 - name: earthly/earthly@v0.8.15
