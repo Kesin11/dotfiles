@@ -9,11 +9,11 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.406.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.417.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: dandavison/delta@0.18.2
-- name: aquasecurity/trivy@v0.65.0
-- name: ast-grep/ast-grep@0.39.4
+- name: aquasecurity/trivy@v0.66.0
+- name: ast-grep/ast-grep@0.39.5
 - name: suzuki-shunsuke/pinact@v3.4.2
 - name: suzuki-shunsuke/ghalint@v1.5.3
 - name: rhysd/actionlint@v1.7.7
