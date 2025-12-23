@@ -35,19 +35,21 @@ echo 'shopt -u histappend' >> ~/.bashrc
 
 # Setup tools
 
-# https://mise.jdx.dev/getting-started.html
-echo "Install mise..."
-curl https://mise.run | sh
-echo "eval \"\$(/home/codespace/.local/bin/mise activate bash)\"" >> ~/.bashrc
+if [[ "${IS_CODESPACES:-}" == "1" ]]; then
+   # https://mise.jdx.dev/getting-started.html
+   echo "Install mise..."
+   curl https://mise.run | sh
+   echo "eval \"\$(/home/codespace/.local/bin/mise activate bash)\"" >> ~/.bashrc
 
-# https://aquaproj.github.io/docs/products/aqua-installer#shell-script
-curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.2/aqua-installer | bash
-echo 'export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH' >> ~/.bashrc
-echo 'export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml' >> ~/.bashrc
+   # https://aquaproj.github.io/docs/products/aqua-installer#shell-script
+   curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v3.1.2/aqua-installer | bash
+   echo 'export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH' >> ~/.bashrc
+   echo 'export AQUA_GLOBAL_CONFIG=${HOME}/aqua.yaml' >> ~/.bashrc
 
-# Install tools from aqua.yaml with aqua global install
-export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
-aqua i -l -a
+   # Install tools from aqua.yaml with aqua global install
+   export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
+   aqua i -l -a
+fi
 
 # Change timezone
 sudo ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
