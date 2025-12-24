@@ -16,4 +16,8 @@ alias la='ls $LS_OPTIONS -hlrta'
 if [ `uname` = "Linux" ]; then
     alias pbcopy='clip.exe'
     alias pbpaste="powershell.exe -command \"[Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding('utf-8');Get-Clipboard\""
+
+    # WSLでBurnToastを使ってデスクトップに通知を送る
+    # https://github.com/microsoft/WSL/issues/2466#issuecomment-370316815
+    alias toast='powershell.exe -command New-BurntToastNotification'
 fi
