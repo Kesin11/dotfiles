@@ -45,6 +45,13 @@ if [[ "${IS_CODESPACES:-}" == "1" ]]; then
    mise use delta@latest
 fi
 
+# Install github copilot-cli
+# ref: https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
+curl -fsSL https://gh.io/copilot-install | bash
+
+# Setup copilot-cli plugins
+copilot plugin install anthropics/claude-plugins-official:plugins/pr-review-toolkit
+
 # Change timezone
 sudo ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
