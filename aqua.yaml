@@ -16,6 +16,7 @@ packages:
 - name: ast-grep/ast-grep@0.42.1
 - name: suzuki-shunsuke/pinact@v3.9.0
 - name: suzuki-shunsuke/ghalint@v1.5.5
+- name: suzuki-shunsuke/ghir@v0.0.3
 - name: rhysd/actionlint@v1.7.12
 - name: google/go-jsonnet@v0.22.0
 
