@@ -18,4 +18,4 @@ packages:
 - name: suzuki-shunsuke/ghalint@v1.5.5
 - name: rhysd/actionlint@v1.7.12
 - name: google/go-jsonnet@v0.22.0
-- name: earthly/earthly@v0.8.16
+
