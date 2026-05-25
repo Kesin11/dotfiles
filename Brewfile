@@ -9,7 +9,7 @@ brew "ncdu"
 brew "pstree"
 brew "yq"
 brew "tree"
-brew "aquaproj/aqua/aqua"
+brew "aqua"
 brew "mise"
 brew "pandoc"
 brew "direnv"
@@ -33,7 +33,7 @@ cask "lm-studio"
 
 # IME, fonts
 cask "google-japanese-ime"
-cask "homebrew/cask-fonts/font-ricty-diminished"
+cask "font-ricty-diminished"
 
 # Additional
 # cask "google-chrome@canary"
