@@ -12,6 +12,7 @@ brew "tree"
 brew "aquaproj/aqua/aqua"
 brew "mise"
 brew "pandoc"
+brew "direnv"
 
 # Dev app
 cask "visual-studio-code"
