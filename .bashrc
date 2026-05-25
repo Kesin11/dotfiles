@@ -14,11 +14,6 @@ unset PROMPT_COMMAND
 # screenでは色々必要だったが、screenを使わないなら-aの即時書き込みだけで別ウィンドウ間で履歴共有可能
 export PROMPT_COMMAND="history -a"
 
-if [ -e $HOME/enhancd ]; then
-    ENHANCD_DISABLE_DOT=1;
-    source ~/enhancd/init.sh
-fi
-
 if [ -e $HOME/.bashrc_local ]; then
     source $HOME/.bashrc_local
 fi

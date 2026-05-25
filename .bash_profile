@@ -1,10 +1,5 @@
-#swhich PATH for MacPorts or homebrew
-
-if [ "$(uname -m)" = "arm64" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-elif [ -e /usr/local/Homebrew ]; then
-    export PATH=/usr/local/bin:$PATH
-fi
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ssh-agent using tmux
 # http://d.hatena.ne.jp/xabre/20130407/1365327582
