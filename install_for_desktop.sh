@@ -27,8 +27,16 @@ if [ `uname` = "Darwin" ]; then
   defaults write -g InitialKeyRepeat -int 15
   defaults write -g KeyRepeat -int 2
 
-  ln -is ~/dotfiles/.bashrc_mac .bashrc_local
+  # Create .bashrc_local
+  cp -i ~/dotfiles/.bashrc_mac ~/.bashrc_local
+
+  # Install homebrew and bottles
   sh ~/dotfiles/brew-install.sh
+
+  # Change default shell zsh to homebrew bash
+  sudo bash -c 'echo /opt/homebrew/bin/bash >> /etc/shells'
+  chsh -s /opt/homebrew/bin/bash
+
 elif [ `uname` = "Linux" ]; then
   ln -is ~/dotfiles/.bashrc_linux .bashrc_local
 fi
